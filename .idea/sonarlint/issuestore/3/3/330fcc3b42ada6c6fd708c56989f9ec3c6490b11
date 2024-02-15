@@ -1,0 +1,15 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ÁÔ·ìÚ1
+}
+java:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(êğ‹İúÿÿÿÿ8ÌÔ·ìÚ1
+>
+java:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ8ÍÔ·ìÚ1
+>
+java:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ8ÍÔ·ìÚ1
+G
+java:S1659%"%Declare "current" on a separate line.(’Œ©—ùÿÿÿÿ8ÎÔ·ìÚ1
+G	java:S106."+Replace this use of System.err by a logger.(­ğˆ8ÏÔ·ìÚ1
+:
+java:S21196"Save and re-use this "Random".(¼İÅf8ÔÔ·ìÚ1
+L	java:S1069"+Replace this use of System.out by a logger.(ÉŒÎêøÿÿÿÿ8ÕÔ·ìÚ1
+L	java:S106O"+Replace this use of System.out by a logger.(şà‰ªøÿÿÿÿ8ØÔ·ìÚ1

@@ -1,0 +1,10 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“
+E	java:S106"+Replace this use of System.out by a logger.(‹½¼Òýÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(£¶‹Íúÿÿÿÿ
+i
+java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Ž²ÈÞ
+^
+java:S1182"HUse super.clone() to create and seed the cloned instance to be returned.(Ž²ÈÞ
+O
+java:S1172)"4Remove these unused method parameters "src", "dest".(é¼µáýÿÿÿÿ

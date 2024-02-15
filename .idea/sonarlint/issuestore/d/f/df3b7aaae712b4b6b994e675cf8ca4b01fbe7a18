@@ -1,0 +1,14 @@
+
+
+java:S1488J"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8˜ÎñëÚ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ÍÜßêÚ1
+~
+java:S1450"\Remove the "leftNeighbour" field and declare it as a local variable in the relevant methods.(Ê³«§ıÿÿÿÿ8˜ëêÚ1
+X	java:S125("<This block of commented-out lines of code should be removed.(‹°îŠ8¬ÎñëÚ1
+p
+java:S2975H"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8±ÎñëÚ1
+e
+java:S1182H"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8²ÎñëÚ1
+G	java:S106]"+Replace this use of System.out by a logger.(Ë·—¡8µÎñëÚ1
+S
+java:S1068"1Remove this unused "leftNeighbour" private field.(Ê³«§ıÿÿÿÿ8ÉëêÚ1
