@@ -1,0 +1,17 @@
+
+b
+java:S1301»"KReplace this "switch" statement by "if" statements to increase readability.(ŠŞß—
+A	java:S106™"+Replace this use of System.err by a logger.(ğà–Ş
+F	java:S106"+Replace this use of System.out by a logger.(¨²™–ıÿÿÿÿ
+A	java:S106"+Replace this use of System.out by a logger.(¿Ş¡˜
+F	java:S106¥"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+\
+java:S2147É"ECombine this catch with the one at line 198, which has the same body.(”÷Ëõ
+F	java:S106³"+Replace this use of System.err by a logger.(¢¾€ÿşÿÿÿÿ
+A	java:S106´"+Replace this use of System.err by a logger.(Â„ß
+A	java:S106µ"+Replace this use of System.err by a logger.(ÓìÖ’
+F	java:S106·"+Replace this use of System.out by a logger.(ˆšÑÖüÿÿÿÿ
+8	java:S131»""Add a default case to this switch.(ŠŞß—
+A	java:S106Ç"+Replace this use of System.err by a logger.(íÖŸ
+A	java:S106Ê"+Replace this use of System.err by a logger.(íÖŸ
+F	java:S106Ğ"+Replace this use of System.out by a logger.(‡ùÂ¹ıÿÿÿÿ
