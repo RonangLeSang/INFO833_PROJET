@@ -21,6 +21,8 @@ public class HelloWorld implements EDProtocol {
     //prefixe de la couche (nom de la variable de protocole du fichier de config)
     private String prefix;
 
+    private Node rightNeighbour;
+
     public HelloWorld(String prefix) {
 	this.prefix = prefix;
 	//initialisation des identifiants a partir du fichier de configuration
@@ -31,9 +33,19 @@ public class HelloWorld implements EDProtocol {
 
     //methode appelee lorsqu'un message est recu par le protocole HelloWorld du noeud
     public void processEvent( Node node, int pid, Object event ) {
-	this.receive((Message)event);
+        this.receive((Message)event);
+        setRightNeighbour();
+        this.send((Message)event, rightNeighbour);
     }
-    
+
+    private void setRightNeighbour() {
+        try{
+            this.rightNeighbour = Network.get(nodeId + 1);
+        }catch(ArrayIndexOutOfBoundsException e){
+            this.rightNeighbour = Network.get(0);
+        }
+    }
+
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
     public Object clone() {
 
