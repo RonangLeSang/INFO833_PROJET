@@ -44,6 +44,7 @@ public class Initializer implements peersim.core.Control {
 	    dest = Network.get(i);
 	    current = (HelloWorld)dest.getProtocol(this.helloWorldPid);
 	    current.setTransportLayer(i);
+		current.setRightNeighbour(i);
 	}
 
 	emitter.send(helloMsg, Network.get(1));
