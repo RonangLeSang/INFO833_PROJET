@@ -40,14 +40,15 @@ public class Initializer implements peersim.core.Control {
 
 	//pour chaque noeud, on fait le lien entre la couche applicative et la couche transport
 	//puis on fait envoyer au noeud 0 un message "Hello"
-	for (int i = 1; i < nodeNb; i++) {
+	for (int i = 0; i < nodeNb; i++) {
 	    dest = Network.get(i);
 	    current = (HelloWorld)dest.getProtocol(this.helloWorldPid);
 	    current.setTransportLayer(i);
 		current.setRightNeighbour(i);
+		current.setLeftNeighbour(i);
 	}
 
-	emitter.send(helloMsg, Network.get(1));
+	emitter.send(helloMsg, Network.get(0));
 
 	System.out.println("Initialization completed");
 	return false;

@@ -23,6 +23,8 @@ public class HelloWorld implements EDProtocol {
 
     private int rightNeighbour;
 
+    private int leftNeighbour;
+
     public HelloWorld(String prefix) {
 	this.prefix = prefix;
 	//initialisation des identifiants a partir du fichier de configuration
@@ -41,12 +43,23 @@ public class HelloWorld implements EDProtocol {
     }
 
 
-
     public void setRightNeighbour(int index) {
         try{
             this.rightNeighbour = Network.get(index + 1).getIndex();
         }catch(ArrayIndexOutOfBoundsException e){
-            this.rightNeighbour = Network.get(1).getIndex();
+            this.rightNeighbour = Network.get(0).getIndex();
+        }
+    }
+
+
+    public void setLeftNeighbour(int index) {
+        try{
+            System.out.println(Network.get(index - 1).getIndex());
+            this.leftNeighbour = Network.get(index - 1).getIndex();
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("feur");
+            System.out.println(Network.size() - 1);
+            this.leftNeighbour = Network.get(Network.size() - 1).getIndex();
         }
     }
 
