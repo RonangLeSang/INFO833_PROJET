@@ -461,8 +461,6 @@ U
 %src/peersim/transport/E2ENetwork.java,3\8\383d3a8dc619a00087ea328848fcbe444fe57a66
 b
 2src/peersim/transport/UniformRouterAssignment.java,7\f\7f1f59ae3dcecf1903717dc3285d553930b49d21
-O
-src/helloWorld/Initializer.java,f\0\f05abe64c622b2ec487251ce45679f15b6f12308
 =
 RELEASE-NOTES,0\2\021ef53208cddfa55fd4d0cdbe9f6c6156199b2f
 a
@@ -477,14 +475,8 @@ U
 %src/peersim/transport/KingParser.java,c\7\c7f0611cae6f3957a5b20c34a6d93bcb1bb0d2f8
 =
 overview.html,7\d\7d62816dc96be2e12aa0928aff45a66668156cde
-N
-src/helloWorld/HelloWorld.java,8\6\8675e8cf28428ad5364ac0801765e1cc012a8949
-K
-src/helloWorld/Message.java,b\8\b80425f4d4abf22f371a807a85149c3936996c13
 F
 exemplePeersimPSIA.iml,0\a\0a71703e20e6ea36b12725f8b7c902460ce24227
-O
-src/helloWorld/HWTransport.java,8\7\87613bf0967ea97a21c7627bedc6e85b2a40a350
 9
 	CHANGELOG,1\c\1c497fbb3a46b78edf04cc2a2fa33f67e3ffbe2a
 @
@@ -673,3 +665,35 @@ R
 "doc/peersim/cdsim/CDSimulator.html,d\2\d225130e5eb5eeb96d8e0a9ee63a2c2d0d477a87
 Q
 !doc/peersim/cdsim/CDProtocol.html,b\9\b92ad7cea978c066cd94d8566d990d321c381ccb
+W
+'src/NetworkApplication/Initializer.java,3\3\330fcc3b42ada6c6fd708c56989f9ec3c6490b11
+\
+,src/NetworkApplication/ApplicationLayer.java,d\f\df3b7aaae712b4b6b994e675cf8ca4b01fbe7a18
+S
+#src/NetworkApplication/Message.java,2\0\202f08d44a5e479e809a7ffe6eedaca7589357ed
+Z
+*src/NetworkApplication/TransportLayer.java,e\8\e839c22117ef970fdefc22e143fd0d6eed3c6616
+Å
+Q.idea/sonarlint/securityhotspotstore/d/f/df3b7aaae712b4b6b994e675cf8ca4b01fbe7a18,3\9\39e625b5780be8ea9b31fbdc2921b2de823ca99a
+Å
+Q.idea/sonarlint/securityhotspotstore/2/0/202f08d44a5e479e809a7ffe6eedaca7589357ed,2\b\2b475f6d99ec1409b7ab4738a3afd861d19bc4eb
+Å
+Q.idea/sonarlint/securityhotspotstore/3/3/330fcc3b42ada6c6fd708c56989f9ec3c6490b11,4\8\48cecfc9f98154fe3898927deeae9eb53d9dd759
+Å
+Q.idea/sonarlint/securityhotspotstore/e/8/e839c22117ef970fdefc22e143fd0d6eed3c6616,2\a\2a052e3003dad961b4333f80961898af8760d438
+Å
+Q.idea/sonarlint/securityhotspotstore/4/8/48cecfc9f98154fe3898927deeae9eb53d9dd759,5\b\5bb809b12f628b6fc6925501bc988b3d85358f86
+Å
+Q.idea/sonarlint/securityhotspotstore/3/9/39e625b5780be8ea9b31fbdc2921b2de823ca99a,8\9\8999226f066af726fe80782ae192564caecf2c3d
+Å
+Q.idea/sonarlint/securityhotspotstore/2/b/2b475f6d99ec1409b7ab4738a3afd861d19bc4eb,3\9\39c96e403fe85e87a8b4dd746acb3055c2f14eed
+Å
+Q.idea/sonarlint/securityhotspotstore/2/a/2a052e3003dad961b4333f80961898af8760d438,c\0\c0cce73fe12bed12bbecf09da54abcb84f010f77
+w
+G.idea/sonarlint/issuestore/3/9/39e625b5780be8ea9b31fbdc2921b2de823ca99a,5\6\561d72ec940d8b875f5986d6370d598fe9d1c380
+w
+G.idea/sonarlint/issuestore/4/8/48cecfc9f98154fe3898927deeae9eb53d9dd759,b\7\b7f18a3ca5b249bdb8a9f8bc4d46e79bbce721d9
+w
+G.idea/sonarlint/issuestore/2/b/2b475f6d99ec1409b7ab4738a3afd861d19bc4eb,6\5\6583d2f08b3e6af9e93d3317bc06dd5c092ea4c9
+w
+G.idea/sonarlint/issuestore/2/a/2a052e3003dad961b4333f80961898af8760d438,c\a\ca098c726c85e403123f78aef68cc0c8f32e96ec

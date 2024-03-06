@@ -1,6 +1,4 @@
-package helloWorld;
-
-import peersim.edsim.*;
+package NetworkApplication;
 
 public class Message {
 

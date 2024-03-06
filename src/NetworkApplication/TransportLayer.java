@@ -1,10 +1,10 @@
-package helloWorld;
+package NetworkApplication;
 
 import peersim.config.*;
 import peersim.core.*;
 import peersim.edsim.*;
 
-public class HWTransport implements Protocol {
+public class TransportLayer implements Protocol {
 
     //variables pour calculer la latence entre les noeuds
     private final long min;
@@ -12,7 +12,7 @@ public class HWTransport implements Protocol {
     private final long range;
     
     
-    public HWTransport(String prefix) {
+    public TransportLayer(String prefix) {
 	System.out.println("Transport Layer Enabled");
 	//recuperation des valeurs extremes de latence depuis le fichier de configuration
 	min = Configuration.getInt(prefix + ".mindelay");

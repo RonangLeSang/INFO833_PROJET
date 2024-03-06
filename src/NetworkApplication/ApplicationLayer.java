@@ -1,16 +1,16 @@
-package helloWorld;
+package NetworkApplication;
 
 import peersim.edsim.*;
 import peersim.core.*;
 import peersim.config.*;
 
-public class HelloWorld implements EDProtocol {
+public class ApplicationLayer implements EDProtocol {
     
     //identifiant de la couche transport
     private int transportPid;
 
     //objet couche transport
-    private HWTransport transport;
+    private TransportLayer transport;
 
     //identifiant de la couche courante (la couche applicative)
     private int mypid;
@@ -25,7 +25,8 @@ public class HelloWorld implements EDProtocol {
 
     private int leftNeighbour;
 
-    public HelloWorld(String prefix) {
+
+    public ApplicationLayer(String prefix) {
 	this.prefix = prefix;
 	//initialisation des identifiants a partir du fichier de configuration
 	this.transportPid = Configuration.getPid(prefix + ".transport");
@@ -33,7 +34,7 @@ public class HelloWorld implements EDProtocol {
 	this.transport = null;
     }
 
-    //methode appelee lorsqu'un message est recu par le protocole HelloWorld du noeud
+    //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
     public void processEvent( Node node, int pid, Object event ) {
         this.receive((Message)event);
 //        System.out.println(Network.get(0).getIndex());
@@ -42,6 +43,13 @@ public class HelloWorld implements EDProtocol {
         this.send((Message)event, Network.get(rightNeighbour));
     }
 
+    public int getNodeId() {
+        return nodeId;
+    }
+
+    public void setNodeId(int nodeId) {
+        this.nodeId = nodeId;
+    }
 
     public void setRightNeighbour(int index) {
         try{
@@ -54,11 +62,8 @@ public class HelloWorld implements EDProtocol {
 
     public void setLeftNeighbour(int index) {
         try{
-            System.out.println(Network.get(index - 1).getIndex());
             this.leftNeighbour = Network.get(index - 1).getIndex();
         }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("feur");
-            System.out.println(Network.size() - 1);
             this.leftNeighbour = Network.get(Network.size() - 1).getIndex();
         }
     }
@@ -66,7 +71,7 @@ public class HelloWorld implements EDProtocol {
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
     public Object clone() {
 
-	HelloWorld dolly = new HelloWorld(this.prefix);
+	ApplicationLayer dolly = new ApplicationLayer(this.prefix);
 
 	return dolly;
     }
@@ -75,7 +80,7 @@ public class HelloWorld implements EDProtocol {
     //objet de la couche transport situes sur le meme noeud
     public void setTransportLayer(int nodeId) {
 	this.nodeId = nodeId;
-	this.transport = (HWTransport) Network.get(this.nodeId).getProtocol(this.transportPid);
+	this.transport = (TransportLayer) Network.get(this.nodeId).getProtocol(this.transportPid);
     }
 
     //envoi d'un message (l'envoi se fait via la couche transport)
