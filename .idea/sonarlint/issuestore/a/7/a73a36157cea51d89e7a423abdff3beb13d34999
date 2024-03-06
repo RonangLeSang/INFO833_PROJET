@@ -1,0 +1,9 @@
+
+a	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+d
+java:S2095p"IUse try-with-resources or close this "PrintStream" in a "finally" clause.(ıÖ¿úÿÿÿÿ
+E	java:S106f"+Replace this use of System.out by a logger.(­½½»ÿÿÿÿÿ
+@	java:S106j"+Replace this use of System.out by a logger.(ß©œı
+@	java:S106o"+Replace this use of System.out by a logger.(«Á¶í
+E	java:S106r"+Replace this use of System.out by a logger.(¼·÷ùÿÿÿÿ
+F	java:S106"+Replace this use of System.err by a logger.(’±Òâÿÿÿÿÿ

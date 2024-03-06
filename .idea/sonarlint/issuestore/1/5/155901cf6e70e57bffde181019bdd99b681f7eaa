@@ -1,0 +1,18 @@
+
+Z
+java:S2259["DA "NullPointerException" could be thrown; "result" is nullable here.(·î¸ö
+g	java:S116:"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦³öÔýÿÿÿÿ
+g
+java:S1206¼"PThis class overrides "hashCode()" and should therefore also override "equals()".(Ÿø™¼
+{
+java:S1149°"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¨âàøÿÿÿÿ
+H
+java:S1172E"-Remove this unused method parameter "prefix".(ØëÏ¿ûÿÿÿÿ
+i
+java:S2975V"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Ž²ÈÞ
+>	java:S108Z")Either remove or fill this block of code.(›•àß
+Q
+java:S2696j"6Make the enclosing method "static" or remove this set.(Ö½Ø½ùÿÿÿÿ
+Q	java:S125|"<This block of commented-out lines of code should be removed.(…ˆœ
+h
+java:S6201€"LReplace this instanceof check and cast with 'instanceof Cleanable cleanable'(ˆÙÙ‹üÿÿÿÿ

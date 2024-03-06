@@ -1,0 +1,6 @@
+
+a	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+s	java:S135f"YReduce the total number of break and continue statements in this loop to use at most one.(¢æª×üÿÿÿÿ
+m
+java:S3776_"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(õ·ÀÜþÿÿÿÿ
+@	java:S106~"+Replace this use of System.err by a logger.(ßèÙ›

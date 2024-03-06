@@ -1,0 +1,51 @@
+
+K
+java:S3740µ"/Provide the parametrized type for this generic.(£’ä†ıÿÿÿÿ
+K
+java:S3740Ü"/Provide the parametrized type for this generic.(¢ôûÿÿÿÿ
+t
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ú¹­úÿÿÿÿ
+o
+java:S2293h"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÒÊ¤Ö
+u
+java:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(È¹™¼üÿÿÿÿ
+u
+java:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ï¶Ò˜ıÿÿÿÿ
+u
+java:S2293î"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ï¶Ò˜ıÿÿÿÿ
+k
+java:S1104""PMake root a static final constant or non-public and provide accessors if needed.(ÁËğûûÿÿÿÿ
+g
+java:S1104-"QMake color a static final constant or non-public and provide accessors if needed.(Î™¾›
+i
+java:S11040"SMake cluster a static final constant or non-public and provide accessors if needed.(°‡•Ÿ
+c
+java:S11043"MMake d a static final constant or non-public and provide accessors if needed.(¯¼‚§
+d
+java:S3973„"HUse indentation to denote the code conditionally executed by this "for".(Ïä¢«ÿÿÿÿÿ
+k
+java:S1149#"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(¯ú¹­úÿÿÿÿ
+r
+java:S1149Î"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Ï¶Ò˜ıÿÿÿÿ
+r
+java:S1149î"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Ï¶Ò˜ıÿÿÿÿ
+[
+java:S1124("EReorder the modifiers to comply with the Java Language Specification.(‘ô—Æ
+`
+java:S1124)"EReorder the modifiers to comply with the Java Language Specification.(‹ƒØíüÿÿÿÿ
+`
+java:S1124*"EReorder the modifiers to comply with the Java Language Specification.(ÒŞ»Óøÿÿÿÿ
+h
+java:S3776f"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(óüè§
+;
+java:S1659i" Declare "du" on a separate line.(òÁ Ãùÿÿÿÿ
+n
+java:S3776µ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(£’ä†ıÿÿÿÿ
+U
+java:S1659¼">Declare "j" and all following declarations on a separate line.(àÆ’¹
+i
+java:S3776—"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Áúƒ
+A
+java:S1197™"*Move the array designators [] to the type.(Âù¯´
+F
+java:S1197š"*Move the array designators [] to the type.(›À‘«ùÿÿÿÿ

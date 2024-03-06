@@ -1,0 +1,13 @@
+
+k
+java:S1104c"UMake prototype a static final constant or non-public and provide accessors if needed.(— ±Ó
+E
+java:S1444c"/Make this "public static prototype" field final(— ±Ó
+Y
+java:S2259±"BA "NullPointerException" could be thrown; "node" is nullable here.(¸ªä·
+F	java:S106ƒ"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+F	java:S106¥"+Replace this use of System.err by a logger.(Ş•·üüÿÿÿÿ
+A	java:S106¦"+Replace this use of System.err by a logger.(ÖıÉÜ
+A	java:S106©"+Replace this use of System.err by a logger.(¥¤ºÃ
+F	java:S106ª"+Replace this use of System.err by a logger.(¨ºòÓşÿÿÿÿ
+A	java:S106²"+Replace this use of System.err by a logger.(¿Åå

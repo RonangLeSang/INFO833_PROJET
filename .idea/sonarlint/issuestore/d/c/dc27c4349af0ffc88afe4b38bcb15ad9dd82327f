@@ -1,0 +1,9 @@
+
+i
+java:S2975-"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Ø·—Î
+>
+java:S1185-"(Remove this method to simply inherit it.(Ø·—Î
+P
+java:S1161-":Add the "@Override" annotation above this method signature(Ø·—Î
+P
+java:S1161<":Add the "@Override" annotation above this method signature(∑õä»

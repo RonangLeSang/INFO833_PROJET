@@ -1,0 +1,15 @@
+
+\	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ı
+F
+java:S1197²"*Move the array designators [] to the type.(Áìùÿÿÿÿ
+F	java:S106¶"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+F	java:S106É"+Replace this use of System.err by a logger.(°©Ïöüÿÿÿÿ
+n
+java:S3776ş"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.( ÇÎ¹ùÿÿÿÿ
+F	java:S106ƒ"+Replace this use of System.err by a logger.(Üç¯ûøÿÿÿÿ
+A	java:S106‹"+Replace this use of System.err by a logger.(ÿçÌã
+F	java:S106“"+Replace this use of System.err by a logger.(å‡½øÿÿÿÿ
+g
+java:S6201«"KReplace this instanceof check and cast with 'instanceof NextCycleEvent nce'(—Œüòùÿÿÿÿ
+@	java:S106Ú"+Replace this use of System.err by a logger.(ÊÆˆ
+A	java:S106á"+Replace this use of System.err by a logger.(¹’Õ˜

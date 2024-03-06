@@ -1,0 +1,14 @@
+
+F
+java:S3740¬"/Provide the parametrized type for this generic.(æœØú
+E
+java:S3740û"/Provide the parametrized type for this generic.(Ÿµä
+t
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(“®Şœşÿÿÿÿ
+c
+java:S1192°"GDefine a constant instead of duplicating this literal ".class" 3 times.(à²ïıÿÿÿÿ
+\
+java:S2095«"EUse try-with-resources or close this "ZipFile" in a "finally" clause.(áŞ•™
+t	java:S1154"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÊôÎïıÿÿÿÿ
+?	java:S106B"+Replace this use of System.err by a logger.(„Êûb
+F	java:S106ÿ"+Replace this use of System.out by a logger.(³ÚïÕıÿÿÿÿ

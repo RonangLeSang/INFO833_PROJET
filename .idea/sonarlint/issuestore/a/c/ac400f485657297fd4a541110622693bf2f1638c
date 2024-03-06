@@ -1,0 +1,12 @@
+
+{
+java:S1149ä"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¨âàøÿÿÿÿ
+M
+java:S1117l"8Rename "size" which hides the field declared at line 78.(œĞ}
+R
+java:S1854Œ";Remove this useless assignment to local variable "mintime".(«Å¥ı
+6
+java:S1659ú"Declare "r" on a separate line.(ƒ˜´¯
+7
+java:S1659ü" Declare "rt" on a separate line.(œ×üÛ
+R	java:S125æ"<This block of commented-out lines of code should be removed.(Çµí‘

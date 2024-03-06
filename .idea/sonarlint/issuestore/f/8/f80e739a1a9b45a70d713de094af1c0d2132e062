@@ -1,0 +1,11 @@
+
+—
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ž¦ƒÇ
+[
+java:S6201/"EReplace this instanceof check and cast with 'instanceof BigInteger a'(µñö³
+[
+java:S3358‘"DExtract this nested ternary operation into an independent statement.(µÐíù
+_
+java:S5738ž"HRemove this call to a deprecated method, it has been marked for removal.(°ñ´Ø
+P
+java:S1161¢":Add the "@Override" annotation above this method signature(§Øá}

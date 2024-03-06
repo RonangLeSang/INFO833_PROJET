@@ -1,0 +1,20 @@
+
+F
+java:S3740’"/Provide the parametrized type for this generic.(ª»–
+F
+java:S3740œ"/Provide the parametrized type for this generic.(¼ÖÌ‹
+t
+java:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÎÁØğıÿÿÿÿ
+t
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(Ãâ¬‰úÿÿÿÿ
+u
+java:S2293–"YReplace the type specification in this constructor call with the diamond operator ("<>").(„ÿÂúúÿÿÿÿ
+@
+java:S1197B"*Move the array designators [] to the type.(’Ë¥»
+E
+java:S1197H"*Move the array designators [] to the type.(Á—”–üÿÿÿÿ
+h
+java:S3776T"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ğŒÈø
+C	java:S108e")Either remove or fill this block of code.(ÅıÅÙıÿÿÿÿ
+U
+java:S1155¢">Use isEmpty() to check whether the collection is empty or not.(ó…³Î

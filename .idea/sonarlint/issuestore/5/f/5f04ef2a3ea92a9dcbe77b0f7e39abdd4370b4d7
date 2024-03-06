@@ -1,0 +1,13 @@
+
+b
+java:S39737"GUse indentation to denote the code conditionally executed by this "if".(´³ð’úÿÿÿÿ
+—
+java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·¤ÚÙ
+—
+java:S1186]"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×§†ý
+H
+java:S1172#"-Remove this unused method parameter "prefix".(ÙÅÈòùÿÿÿÿ
+n
+java:S2975("SRemove this "clone" implementation; use a copy constructor or copy factory instead.(‰×šýøÿÿÿÿ
+c
+java:S1182("HUse super.clone() to create and seed the cloned instance to be returned.(‰×šýøÿÿÿÿ

@@ -1,0 +1,14 @@
+
+—
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Æüè
+œ
+java:S11863"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ÙÕıÿÿÿÿ
+–
+java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Şû‚-
+@	java:S106&"+Replace this use of System.out by a logger.(›ÿ©­
+P
+java:S1161,":Add the "@Override" annotation above this method signature(¿Æüè
+U
+java:S11613":Add the "@Override" annotation above this method signature(”ÙÕıÿÿÿÿ
+C
+java:S1144:".Remove this unused private "printLine" method.(Şû‚-

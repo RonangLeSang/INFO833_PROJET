@@ -1,0 +1,9 @@
+
+f	java:S116."LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ÖÿŠýÿÿÿÿ
+a
+java:S1845."FRename field "N" to prevent any misunderstanding/clash with field "n".(£ÖÿŠýÿÿÿÿ
+@
+java:S1197t"*Move the array designators [] to the type.(ÒœÞ´
+j
+java:S2975ú"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(¯áÑë
+R	java:S125«"<This block of commented-out lines of code should be removed.(¯êÂ¤

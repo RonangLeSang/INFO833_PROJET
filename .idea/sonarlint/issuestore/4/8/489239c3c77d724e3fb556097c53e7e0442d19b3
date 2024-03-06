@@ -1,0 +1,18 @@
+
+`	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+\	java:S112’"FDefine and throw a dedicated exception instead of using a generic one.(ß¢İÜ
+\	java:S112Û"FDefine and throw a dedicated exception instead of using a generic one.(¹ ®õ
+E
+java:S3740u"/Provide the parametrized type for this generic.(™Ñ·
+F
+java:S3740£"/Provide the parametrized type for this generic.(ª»–
+K
+java:S3740¹"/Provide the parametrized type for this generic.(¨±ıûÿÿÿÿ
+K
+java:S3740º"/Provide the parametrized type for this generic.(¤Áğúıÿÿÿÿ
+u
+java:S2293¨"YReplace the type specification in this constructor call with the diamond operator ("<>").(„ÿÂúúÿÿÿÿ
+g
+java:S1192¾"KDefine a constant instead of duplicating this literal " of class " 3 times.(‰İëúÿÿÿÿ
+Z
+java:S1155¯">Use isEmpty() to check whether the collection is empty or not.(á‡Ÿüşÿÿÿÿ

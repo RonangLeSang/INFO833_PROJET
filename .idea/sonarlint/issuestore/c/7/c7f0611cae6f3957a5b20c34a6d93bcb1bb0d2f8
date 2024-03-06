@@ -1,0 +1,28 @@
+
+c
+java:S1192y"HDefine a constant instead of duplicating this literal ", line " 4 times.(ß–ÁÔøÿÿÿÿ
+h
+java:S1192y"MDefine a constant instead of duplicating this literal "KingParser: " 4 times.(ß–ÁÔøÿÿÿÿ
+Q
+java:S1141"5Extract this nested try block into a separate method.(´õíàûÿÿÿÿ
+m
+java:S3776Z"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Éé¦Ëÿÿÿÿÿ
+E	java:S106y"+Replace this use of System.err by a logger.(ß–ÁÔøÿÿÿÿ
+C	java:S108{")Either remove or fill this block of code.(´õíàûÿÿÿÿ
+7
+java:S1116{"Remove this empty statement.(´õíàûÿÿÿÿ
+F	java:S106€"+Replace this use of System.err by a logger.(ß–ÁÔøÿÿÿÿ
+F	java:S106"+Replace this use of System.err by a logger.(‡š“Åøÿÿÿÿ
+D	java:S108‚")Either remove or fill this block of code.(´õíàûÿÿÿÿ
+8
+java:S1116‚"Remove this empty statement.(´õíàûÿÿÿÿ
+F	java:S106†"+Replace this use of System.err by a logger.(ÀËÏáşÿÿÿÿ
+F	java:S106Œ"+Replace this use of System.err by a logger.(ß–ÁÔøÿÿÿÿ
+F	java:S106"+Replace this use of System.err by a logger.(Ÿœÿñüÿÿÿÿ
+D	java:S108")Either remove or fill this block of code.(´õíàûÿÿÿÿ
+8
+java:S1116"Remove this empty statement.(´õíàûÿÿÿÿ
+F	java:S106œ"+Replace this use of System.err by a logger.(ß–ÁÔøÿÿÿÿ
+D	java:S108")Either remove or fill this block of code.(´õíàûÿÿÿÿ
+8
+java:S1116"Remove this empty statement.(´õíàûÿÿÿÿ

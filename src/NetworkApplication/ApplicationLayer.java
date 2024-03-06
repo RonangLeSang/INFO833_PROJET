@@ -4,6 +4,8 @@ import peersim.edsim.*;
 import peersim.core.*;
 import peersim.config.*;
 
+import java.util.HashMap;
+
 public class ApplicationLayer implements EDProtocol {
     
     //identifiant de la couche transport
@@ -21,9 +23,9 @@ public class ApplicationLayer implements EDProtocol {
     //prefixe de la couche (nom de la variable de protocole du fichier de config)
     private String prefix;
 
-    private int rightNeighbour;
+    private HashMap<Integer, Integer> rightNeighbour;
 
-    private int leftNeighbour;
+    private HashMap<Integer, Integer> leftNeighbour;
 
 
     public ApplicationLayer(String prefix) {
@@ -36,11 +38,11 @@ public class ApplicationLayer implements EDProtocol {
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
     public void processEvent( Node node, int pid, Object event ) {
-        this.receive((Message)event);
-//        System.out.println(Network.get(0).getIndex());
-//        System.out.println("pid : " + mypid);
-//        System.out.println("id : " + nodeId);
-        this.send((Message)event, Network.get(rightNeighbour));
+//        this.receive((Object)event);
+
+        Node nodeTmp = (Node)event;
+        ApplicationLayer appTmp = (ApplicationLayer)nodeTmp.getProtocol(0);
+        System.out.println("message reçu de : " + appTmp.getNodeId() + " sur : " + nodeId + " contenu : " + event);
     }
 
     public int getNodeId() {
@@ -51,20 +53,19 @@ public class ApplicationLayer implements EDProtocol {
         this.nodeId = nodeId;
     }
 
-    public void setRightNeighbour(int index) {
-        try{
-            this.rightNeighbour = Network.get(index + 1).getIndex();
-        }catch(ArrayIndexOutOfBoundsException e){
-            this.rightNeighbour = Network.get(0).getIndex();
-        }
+    public void setRightNeighbour(HashMap<Integer, Integer> rightNeighbour) {
+        this.rightNeighbour = rightNeighbour;
     }
 
+    public void setLeftNeighbour(HashMap<Integer, Integer> leftNeighbour) {
+        this.leftNeighbour = leftNeighbour;
+    }
 
-    public void setLeftNeighbour(int index) {
-        try{
-            this.leftNeighbour = Network.get(index - 1).getIndex();
-        }catch(ArrayIndexOutOfBoundsException e){
-            this.leftNeighbour = Network.get(Network.size() - 1).getIndex();
+    public void setNeighbours(ApplicationLayer node) {
+        if (node.getNodeId() < nodeId) {
+            transport.send(getMyNode(), Network.get(leftNeighbour.get("index")), new Message(Message.HELLOWORLD, "Hello!!"), this.mypid);
+        } else {
+            transport.send(getMyNode(), Network.get(rightNeighbour.get("index")), new Message(Message.HELLOWORLD, "Hello!!"), this.mypid);
         }
     }
 
@@ -78,9 +79,8 @@ public class ApplicationLayer implements EDProtocol {
 
     //liaison entre un objet de la couche applicative et un 
     //objet de la couche transport situes sur le meme noeud
-    public void setTransportLayer(int nodeId) {
-	this.nodeId = nodeId;
-	this.transport = (TransportLayer) Network.get(this.nodeId).getProtocol(this.transportPid);
+    public void setTransportLayer(int index) {
+	this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
     }
 
     //envoi d'un message (l'envoi se fait via la couche transport)
@@ -89,8 +89,8 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     //affichage a la reception
-    private void receive(Message msg) {
-	System.out.println(this + ": Received " + msg.getContent());
+    private void receive(Object msg) {
+	System.out.println(this + ": Received " + msg);
     }
 
     //retourne le noeud courant
@@ -98,9 +98,11 @@ public class ApplicationLayer implements EDProtocol {
 	return Network.get(this.nodeId);
     }
 
-    public String toString() {
-	return "Node "+ this.nodeId;
+    public int getMypid() {
+        return mypid;
     }
 
-    
+
+
+
 }

@@ -1,0 +1,15 @@
+
+n	java:S135u"YReduce the total number of break and continue statements in this loop to use at most one.(γεμ“
+q	java:S116;"WRename this field "getpair_rand" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ώ©Υϊÿÿÿÿ
+P
+java:S3252C":Use static access with "peersim.core.CommonState" for "r".(¨«ξ
+h
+java:S3776d"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ΆΖέ
+P
+java:S3252l":Use static access with "peersim.core.CommonState" for "r".(™Ò… 
+[
+java:S3252r"@Use static access with "peersim.core.CommonState" for "setNode".(™΅™±ψÿÿÿÿ
+Z
+java:S3252|"?Use static access with "peersim.core.CommonState" for "setPid".(Α³Ϊ€ώÿÿÿÿ
+c
+java:S6201~"NReplace this instanceof check and cast with 'instanceof CDProtocol cdprotocol'(±¥Z

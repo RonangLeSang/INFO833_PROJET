@@ -1,0 +1,14 @@
+
+n	java:S135Y"YReduce the total number of break and continue statements in this loop to use at most one.(†Šÿ¼
+h
+java:S3776I"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(š¢ÆÝ
+P
+java:S1161I":Add the "@Override" annotation above this method signature(š¢ÆÝ
+P
+java:S3252Q":Use static access with "peersim.core.CommonState" for "r".(™Ò… 
+[
+java:S3252W"@Use static access with "peersim.core.CommonState" for "setNode".(™¡™±øÿÿÿÿ
+T
+java:S3252`"?Use static access with "peersim.core.CommonState" for "setPid".(Ìö¨
+c
+java:S6201b"NReplace this instanceof check and cast with 'instanceof CDProtocol cdprotocol'(±ˆ¥Z

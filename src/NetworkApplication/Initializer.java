@@ -3,6 +3,7 @@ package NetworkApplication;
 import peersim.core.*;
 import peersim.config.*;
 
+import java.util.HashMap;
 import java.util.Random;
 
 /*
@@ -20,28 +21,15 @@ public class Initializer implements peersim.core.Control {
 	this.helloWorldPid = Configuration.getPid(prefix + ".helloWorldProtocolPid");
     }
 
-	private void setNeighbours(ApplicationLayer node){
-		ApplicationLayer current;
-		Node dest;
-		dest = Network.get(0);
-		current = (ApplicationLayer)dest.getProtocol(this.helloWorldPid);
-		if(node.getNodeId() < current.getNodeId()){
-			;
-		}else{
-			;
-		}
-	}
-
     public boolean execute() {
 	int nodeNb;
 	ApplicationLayer emitter, current;
 	Node dest;
 	Message helloMsg;
 
-	//recuperation de la taille du reseau
 	nodeNb = Network.size();
 	//creation du message
-	helloMsg = new Message(Message.HELLOWORLD,"Hello!!");
+	helloMsg = new Message(Message.HELLOWORLD,"");
 	if (nodeNb < 1) {
 	    System.err.println("Network size is not positive");
 	    System.exit(1);
@@ -51,6 +39,7 @@ public class Initializer implements peersim.core.Control {
 	emitter = (ApplicationLayer)Network.get(0).getProtocol(this.helloWorldPid);
 	emitter.setTransportLayer(0);
 
+	//creation des ID de nodes
 	Random random = new Random();
 	for (int i = 0; i < nodeNb; i++) {
 		int randomNumber = random.nextInt(1000, 9999);
@@ -60,21 +49,24 @@ public class Initializer implements peersim.core.Control {
 		current.setNodeId(randomNumber);
 	}
 
-	ApplicationLayer firstNode = (ApplicationLayer) Network.get(1);
-	firstNode.setRightNeighbour(0);
-	firstNode.setLeftNeighbour(0);
+	HashMap<Integer, Integer> rightNeighbour = new HashMap<>();
+	ApplicationLayer app = (ApplicationLayer)Network.get(0).getProtocol(0);
+	rightNeighbour.put(app.getNodeId(), 0);
+
+	emitter.setRightNeighbour(rightNeighbour);
+	emitter.setLeftNeighbour(rightNeighbour);
 
 	//pour chaque noeud, on fait le lien entre la couche applicative et la couche transport
 	//puis on fait envoyer au noeud 0 un message "Hello"
 	for (int i = 1; i < nodeNb; i++) {
 	    dest = Network.get(i);
-	    current = (ApplicationLayer)dest.getProtocol(this.helloWorldPid);
+	    current = (ApplicationLayer)dest.getProtocol(0);
 	    current.setTransportLayer(i);
-
-		setNeighbours(current);
 	}
+//	dest.setNeighbours(Network.get(1));
+	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);
+	tmp.send(Network.get(0), Network.get(5), Network.get(0), 0);
 
-	emitter.send(helloMsg, Network.get(0));
 
 	System.out.println("Initialization completed");
 	return false;

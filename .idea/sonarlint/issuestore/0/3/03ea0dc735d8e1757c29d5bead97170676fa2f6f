@@ -1,0 +1,11 @@
+
+<
+java:S3010A"!Remove this assignment of "step".(Ã©½Èøÿÿÿÿ
+@
+java:S3010D"%Remove this assignment of "controls".(ñŽ´åúÿÿÿÿ
+@
+java:S3010G"%Remove this assignment of "controls".(Æ†µ²þÿÿÿÿ
+?	java:S106I"+Replace this use of System.err by a logger.(Í±¹9
+i
+java:S2975N"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Ž²ÈÞ
+>	java:S108R")Either remove or fill this block of code.(›•àß

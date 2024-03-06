@@ -1,0 +1,10 @@
+
+a	java:S112‡"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ
+P
+java:S1141e"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+e
+java:S2095f"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(Ù¶×¹
+@	java:S106i"+Replace this use of System.err by a logger.(º´ÿª
+@	java:S106n"+Replace this use of System.err by a logger.(²“¡·
+E	java:S106v"+Replace this use of System.err by a logger.(õ—„¹ûÿÿÿÿ
+F	java:S106…"+Replace this use of System.err by a logger.(ÿò¶‰úÿÿÿÿ

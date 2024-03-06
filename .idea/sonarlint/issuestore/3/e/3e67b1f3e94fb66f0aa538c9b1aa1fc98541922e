@@ -1,0 +1,13 @@
+
+n
+java:S1192O"SDefine a constant instead of duplicating this literal "ConfigProperties: " 3 times.(¢êÌíøÿÿÿÿ
+d
+java:S2095œ"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(üÕÍ‡
+v
+java:S1149¹"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+?	java:S106I"+Replace this use of System.err by a logger.(ó”âk
+E	java:S106O"+Replace this use of System.err by a logger.(¢êÌíøÿÿÿÿ
+E	java:S106Y"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+@	java:S106b"+Replace this use of System.err by a logger.(‘ŒİÛ
+E	java:S106g"+Replace this use of System.err by a logger.(ÀÙêÃúÿÿÿÿ
+E	java:S106l"+Replace this use of System.err by a logger.(¢êÌíøÿÿÿÿ

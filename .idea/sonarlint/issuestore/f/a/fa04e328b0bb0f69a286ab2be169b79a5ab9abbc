@@ -1,0 +1,8 @@
+
+V
+java:S2259K"@A "NullPointerException" could be thrown; "ip" is nullable here.(„Ö˜û
+{
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¨âàøÿÿÿÿ
+n
+java:S2975F"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(¯ÔÚ“ùÿÿÿÿ
+>	java:S108J")Either remove or fill this block of code.(›•àß

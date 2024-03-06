@@ -1,0 +1,21 @@
+
+F
+java:S3740š"/Provide the parametrized type for this generic.(Ş˜„ÿ
+p
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡¿ŸÈ
+o	java:S135®"YReduce the total number of break and continue statements in this loop to use at most one.(‚Ğ Ü
+8
+java:S1643Ä"Use a StringBuilder instead.(›çµıÿÿÿÿ
+3
+java:S1643É"Use a StringBuilder instead.(Û…Ç›
+P
+java:S1161{":Add the "@Override" annotation above this method signature(â¡Ìø
+R	java:S125„"<This block of commented-out lines of code should be removed.(ßÓ˜‡
+n
+java:S3776™"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(İóÃèûÿÿÿÿ
+A	java:S106"+Replace this use of System.err by a logger.(Ü½µ
+A	java:S106£"+Replace this use of System.err by a logger.(¸òö²
+F	java:S106Ò"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+F	java:S106ê"+Replace this use of System.err by a logger.(Ê»àûüÿÿÿÿ
+A	java:S106ï"+Replace this use of System.err by a logger.(„°º£
+W	java:S125ù"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ

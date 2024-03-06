@@ -1,0 +1,10 @@
+
+K
+java:S1066»"/Merge this if statement with the enclosing one.(ÓûÃïùÿÿÿÿ
+U
+java:S3516¶"9Refactor this method to not always return the same value.(Äá¼¨ıÿÿÿÿ
+f
+java:S1845{"KRename method "add" to prevent any misunderstanding/clash with field "add".(±ğüÿÿÿÿ
+R	java:S125¦"<This block of commented-out lines of code should be removed.(ìÌ²¯
+n
+java:S3776¶"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Äá¼¨ıÿÿÿÿ

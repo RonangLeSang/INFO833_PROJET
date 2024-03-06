@@ -1,0 +1,21 @@
+
+p
+java:S1450c"URemove the "cycles" field and declare it as a local variable in the relevant methods.(Õ¡Ïûıÿÿÿÿ
+E
+java:S1197}"*Move the array designators [] to the type.(Áìùÿÿÿÿ
+A	java:S106€"+Replace this use of System.err by a logger.(æè­¶
+A	java:S106œ"+Replace this use of System.err by a logger.(·„¯ø
+_
+java:S3252·"CUse static access with "peersim.core.CommonState" for "setEndTime".(û†€õüÿÿÿÿ
+]
+java:S3252»"AUse static access with "peersim.core.CommonState" for "setPhase".(–ê·¥ÿÿÿÿÿ
+b
+java:S3252»"FUse static access with "peersim.core.CommonState" for "PHASE_UNKNOWN".(–ê·¥ÿÿÿÿÿ
+A	java:S106¼"+Replace this use of System.err by a logger.(¾€Ì
+F	java:S106À"+Replace this use of System.err by a logger.(ÊòÂÿÿÿÿÿ
+A	java:S106Æ"+Replace this use of System.err by a logger.(ñïÿ˜
+F	java:S106Ñ"+Replace this use of System.err by a logger.(ÊœÄùûÿÿÿÿ
+W
+java:S3252Ô"AUse static access with "peersim.core.CommonState" for "setPhase".(‹ê¢[
+^
+java:S3252Ô"HUse static access with "peersim.core.CommonState" for "POST_SIMULATION".(‹ê¢[

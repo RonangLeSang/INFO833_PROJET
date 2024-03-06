@@ -1,0 +1,21 @@
+
+o
+java:S2293?"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñæğØ
+t
+java:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚Òå†øÿÿÿÿ
+t
+java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(Íüô¸úÿÿÿÿ
+o
+java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(êç ì
+t
+java:S2293Q"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯ŠÊåùÿÿÿÿ
+n
+java:S2293g"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÙªÚS
+d
+java:S3824b"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(üç“
+=
+java:S1948#"'Make "nodes" transient or serializable.(…’„
+A
+java:S1948,"+Make "nodeindex" transient or serializable.(ñ‘¤ş
+ˆ
+java:S6485A"mReplace this call to the constructor with the better suited static method HashMap.newHashMap(int numMappings)(Íüô¸úÿÿÿÿ

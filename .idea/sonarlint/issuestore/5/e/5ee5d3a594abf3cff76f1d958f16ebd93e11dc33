@@ -1,0 +1,90 @@
+
+a	java:S112ª"FDefine and throw a dedicated exception instead of using a generic one.(Û‚±şÿÿÿÿ
+[	java:S112İ"FDefine and throw a dedicated exception instead of using a generic one.(‰Æáe
+D
+java:S3740^"/Provide the parametrized type for this generic.( Âœ
+D
+java:S3740d"/Provide the parametrized type for this generic.(Ÿµä
+E
+java:S3740ğ"/Provide the parametrized type for this generic.(ñ’ÎM
+K
+java:S3740ò"/Provide the parametrized type for this generic.(–ì‘şÿÿÿÿ
+K
+java:S3740˜"/Provide the parametrized type for this generic.(¼ôİ´ûÿÿÿÿ
+K
+java:S3740¢"/Provide the parametrized type for this generic.(Áì½ãûÿÿÿÿ
+F
+java:S3740«"/Provide the parametrized type for this generic.(¥±ª
+K
+java:S3740ï"/Provide the parametrized type for this generic.(ë¶‘ùÿÿÿÿ
+K
+java:S3740ï"/Provide the parametrized type for this generic.(ë¶‘ùÿÿÿÿ
+F
+java:S3740˜"/Provide the parametrized type for this generic.(¸Ö¥æ
+K
+java:S3740Ÿ"/Provide the parametrized type for this generic.(ú¬ƒ“ıÿÿÿÿ
+E
+java:S3740ø"/Provide the parametrized type for this generic.( Âœ
+K
+java:S3740£"/Provide the parametrized type for this generic.(ğÏô·úÿÿÿÿ
+K
+java:S3740¤"/Provide the parametrized type for this generic.(²Í·…ıÿÿÿÿ
+K
+java:S3740¿"/Provide the parametrized type for this generic.(—îØéúÿÿÿÿ
+o
+java:S2293T"YReplace the type specification in this constructor call with the diamond operator ("<>").(…ºœ
+t
+java:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘åÀÛùÿÿÿÿ
+u
+java:S2293õ"YReplace the type specification in this constructor call with the diamond operator ("<>").(—çˆèşÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(™Ïú.
+c
+java:S1192Ù"GDefine a constant instead of duplicating this literal "Class " 3 times.(¤ø³¹øÿÿÿÿ
+_
+java:S1192ã"HDefine a constant instead of duplicating this literal "Error: " 3 times.(Ã½É¡
+g	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í’Â
+l
+java:S1149ğ"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ñ’ÎM
+{
+java:S1149Ğ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¨âàøÿÿÿÿ
+@	java:S106g"+Replace this use of System.err by a logger.(Ğ¶ù³
+W	java:S125±"<This block of commented-out lines of code should be removed.(×Ãˆ©ûÿÿÿÿ
+X
+java:S2130·"AUse "Boolean.parseBoolean" for this string-to-boolean conversion.(ÇÅ™Î
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(…Â©ğùÿÿÿÿ
+F	java:S106á"+Replace this use of System.err by a logger.(¿ÏÄ’şÿÿÿÿ
+W	java:S125¨"<This block of commented-out lines of code should be removed.(×Ãˆ©ûÿÿÿÿ
+R	java:S125î"<This block of commented-out lines of code should be removed.(Í¤§ó
+n
+java:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(Áì½ãûÿÿÿÿ
+W	java:S125§"<This block of commented-out lines of code should be removed.(×Ãˆ©ûÿÿÿÿ
+?	java:S108°")Either remove or fill this block of code.(ıàÑÎ
+?	java:S108¸")Either remove or fill this block of code.(ıàÑÎ
+F
+java:S1197"*Move the array designators [] to the type.(¾İÕ£ÿÿÿÿÿ
+F
+java:S1197 "*Move the array designators [] to the type.(§ êşÿÿÿÿÿ
+q
+java:S6201¦"ZReplace this instanceof check and cast with 'instanceof RuntimeException runtimeexception'(ˆ¨¡ğ
+F
+java:S1197Û"*Move the array designators [] to the type.(‡Úçüÿÿÿÿ
+i
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ñòµı
+u
+java:S3012¿"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(­ÈÙ‰ûÿÿÿÿ
+F	java:S106ò"+Replace this use of System.err by a logger.(¶ÅƒÚøÿÿÿÿ
+u
+java:S3012•"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(›ÉÉßùÿÿÿÿ
+F	java:S106Ò"+Replace this use of System.out by a logger.(ˆõÃ­şÿÿÿÿ
+B
+java:S1172Ş"+Remove this unused method parameter "name".(üÎìÖ
+ˆ
+java:S6201á"lReplace this instanceof check and cast with 'instanceof MissingParameterException missingparameterexception'(Ñ«”¥øÿÿÿÿ
+A	java:S106ã"+Replace this use of System.out by a logger.(Ã½É¡
+ƒ
+java:S6201å"lReplace this instanceof check and cast with 'instanceof IllegalParameterException illegalparameterexception'(û”¾©
+A	java:S106ç"+Replace this use of System.out by a logger.(Ã½É¡
+A	java:S106ê"+Replace this use of System.out by a logger.(äìÎÆ
+S
+java:S1144»"7Remove this unused private "getSimilarProperty" method.(ÍƒœÊÿÿÿÿÿ

@@ -1,0 +1,21 @@
+
+u
+java:S2293’"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë–Şéıÿÿÿÿ
+{
+java:S1149¿"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(…Ô×´ùÿÿÿÿ
+A	java:S106¡"+Replace this use of System.err by a logger.(ğà–Ş
+\
+java:S2147Ã"ECombine this catch with the one at line 191, which has the same body.(”÷Ëõ
+A	java:S106Á"+Replace this use of System.err by a logger.(íÖŸ
+A	java:S106Å"+Replace this use of System.err by a logger.(íÖŸ
+u
+java:S3012™"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(‘ä‰äúÿÿÿÿ
+p
+java:S3012 "YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(üõçó
+A	java:S106Í"+Replace this use of System.err by a logger.(İà’‚
+A	java:S106ğ"+Replace this use of System.err by a logger.(ÛÎ«ö
+F	java:S106ü"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ
+A	java:S106€"+Replace this use of System.err by a logger.(½ÑÕ
+F	java:S106ƒ"+Replace this use of System.out by a logger.(ñ—¸½úÿÿÿÿ
+F	java:S106±"+Replace this use of System.err by a logger.(¿ïÇşÿÿÿÿ
+F	java:S106²"+Replace this use of System.err by a logger.(Åë£ÿÿÿÿÿ

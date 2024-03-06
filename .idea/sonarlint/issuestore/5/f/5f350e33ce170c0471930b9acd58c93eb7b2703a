@@ -1,0 +1,11 @@
+
+b
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ŠŞß—
+‡
+java:S1130{"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(°÷ÇÎÿÿÿÿÿ
+F	java:S106…"+Replace this use of System.err by a logger.(„Ó±âûÿÿÿÿ
+\
+java:S2147Ÿ"ECombine this catch with the one at line 156, which has the same body.(”÷Ëõ
+8	java:S131""Add a default case to this switch.(ŠŞß—
+F	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
+F	java:S106 "+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
