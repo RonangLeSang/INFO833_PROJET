@@ -1,21 +1,23 @@
 
 ˆ
-java:S13198"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8†ÇÁ¢á1
+java:S13198"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8¥Ÿ†¤á1
 Œ
-java:S1319<"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8ˆÇÁ¢á1
+java:S1319<"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8¥Ÿ†¤á1
+r	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ÿè›şÿÿÿÿ8¥Ÿ†¤á1
 
-java:S1488K"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8›¬¼¢á1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8œ¬¼¢á1
-X	java:S125)"<This block of commented-out lines of code should be removed.(ëŒºè8¦¬¼¢á1
-G	java:S106-"+Replace this use of System.out by a logger.(áÊ¶8§¬¼¢á1
-i
-java:S2175B"LA "HashMap<Integer, Integer>" cannot contain a "String" in a "Integer" type.(İÌ§ú8ÿé£á1
+java:S1488S"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8¦Ÿ†¤á1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8§Ÿ†¤á1
+X	java:S125)"<This block of commented-out lines of code should be removed.(ëŒºè8»Ÿ†¤á1
+G	java:S106-"+Replace this use of System.out by a logger.(áÊ¶8¼Ÿ†¤á1
+M
+java:S1172@"+Remove this unused method parameter "node".(¦Ÿè›şÿÿÿÿ8¾Ÿ†¤á1
+G	java:S106D"+Replace this use of System.out by a logger.(´À´Ğ8ÁŸ†¤á1
 n
-java:S2175D"LA "HashMap<Integer, Integer>" cannot contain a "String" in a "Integer" type.(ƒë„ùÿÿÿÿ8€ê£á1
+java:S2175L"LA "HashMap<Integer, Integer>" cannot contain a "String" in a "Integer" type.(ƒë„ùÿÿÿÿ8ÄŸ†¤á1
 p
-java:S2975I"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8ª¬¼¢á1
+java:S2975Q"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8ÄŸ†¤á1
 e
-java:S1182I"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8«¬¼¢á1
-G	java:S106]"+Replace this use of System.out by a logger.(şâì8¬¬¼¢á1
+java:S1182Q"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8ÅŸ†¤á1
+G	java:S106e"+Replace this use of System.out by a logger.(şâì8ÇŸ†¤á1
 I
-java:S1144\",Remove this unused private "receive" method.(Ä‰¥Ù8­¬¼¢á1
+java:S1144d",Remove this unused private "receive" method.(Ä‰¥Ù8ÈŸ†¤á1

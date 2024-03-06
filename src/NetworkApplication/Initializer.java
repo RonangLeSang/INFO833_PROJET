@@ -23,21 +23,20 @@ public class Initializer implements peersim.core.Control {
 
     public boolean execute() {
 	int nodeNb;
-	ApplicationLayer emitter, current;
+	ApplicationLayer ApNodeInit, current;
 	Node dest;
 	Message helloMsg;
 
 	nodeNb = Network.size();
 	//creation du message
-	helloMsg = new Message(Message.HELLOWORLD,"");
 	if (nodeNb < 1) {
 	    System.err.println("Network size is not positive");
 	    System.exit(1);
 	}
 
 	//recuperation de la couche applicative de l'emetteur (le noeud 0)
-	emitter = (ApplicationLayer)Network.get(0).getProtocol(this.helloWorldPid);
-	emitter.setTransportLayer(0);
+	ApNodeInit = (ApplicationLayer)Network.get(0).getProtocol(this.helloWorldPid);
+	ApNodeInit.setTransportLayer(0);
 
 	//creation des ID de nodes
 	Random random = new Random();
@@ -53,8 +52,8 @@ public class Initializer implements peersim.core.Control {
 	ApplicationLayer app = (ApplicationLayer)Network.get(0).getProtocol(0);
 	rightNeighbour.put(app.getNodeId(), 0);
 
-	emitter.setRightNeighbour(rightNeighbour);
-	emitter.setLeftNeighbour(rightNeighbour);
+		ApNodeInit.setRightNeighbour(rightNeighbour);
+		ApNodeInit.setLeftNeighbour(rightNeighbour);
 
 	//pour chaque noeud, on fait le lien entre la couche applicative et la couche transport
 	//puis on fait envoyer au noeud 0 un message "Hello"
@@ -62,6 +61,7 @@ public class Initializer implements peersim.core.Control {
 	    dest = Network.get(i);
 	    current = (ApplicationLayer)dest.getProtocol(0);
 	    current.setTransportLayer(i);
+		ApNodeInit.setNeighbours(dest, 0);
 	}
 //	dest.setNeighbours(Network.get(1));
 	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);

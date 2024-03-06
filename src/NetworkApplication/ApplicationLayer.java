@@ -61,9 +61,17 @@ public class ApplicationLayer implements EDProtocol {
         this.leftNeighbour = leftNeighbour;
     }
 
-    public void setNeighbours(ApplicationLayer node) {
-        if (node.getNodeId() < nodeId) {
-            transport.send(getMyNode(), Network.get(leftNeighbour.get("index")), new Message(Message.HELLOWORLD, "Hello!!"), this.mypid);
+    public void setNeighbours(Node node, int SrcIndex) {
+        HashMap<String, Integer> message = new HashMap<>();
+        message.put("srcIndex", SrcIndex);
+        message.put("srcID", getNodeId());
+        System.out.println( leftNeighbour.keySet().iterator().next());
+        if (SrcIndex < nodeId) {
+            int reqIndex = leftNeighbour.keySet().iterator().next();
+            message.put("reqIndex", reqIndex);
+            message.put("reqID", leftNeighbour.get(reqIndex));
+            //A changer
+            transport.send(Network.get(0), Network.get(5), Network.get(0), 0);
         } else {
             transport.send(getMyNode(), Network.get(rightNeighbour.get("index")), new Message(Message.HELLOWORLD, "Hello!!"), this.mypid);
         }

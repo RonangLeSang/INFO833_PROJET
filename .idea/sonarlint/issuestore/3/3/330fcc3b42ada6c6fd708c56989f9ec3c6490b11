@@ -1,14 +1,13 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ò¸ÿ¢á1
-Y
-java:S1854 "<Remove this useless assignment to local variable "helloMsg".(…‰ÃÁ8„¹ÿ¢á1
-G
-java:S1659"%Declare "current" on a separate line.(’Œ©—ùÿÿÿÿ8„¹ÿ¢á1
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦’§8éÓ´£á1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ÁÔ·ìÚ1
+A
+java:S1659"%Declare "current" on a separate line.(¦’§8“éš£á1
 I
-java:S1481"-Remove this unused "helloMsg" local variable.(´Éô98…¹ÿ¢á1
-G	java:S106""+Replace this use of System.err by a logger.(­ðˆ8…¹ÿ¢á1
+java:S1481"-Remove this unused "helloMsg" local variable.(´Éô98”éš£á1
+G	java:S106!"+Replace this use of System.err by a logger.(­ðˆ8–éš£á1
 :
-java:S2119+"Save and re-use this "Random".(¼ÝÅf8ˆ¹ÿ¢á1
-L	java:S106."+Replace this use of System.out by a logger.(ÉŒÎêøÿÿÿÿ8ˆ¹ÿ¢á1
-X	java:S125B"<This block of commented-out lines of code should be removed.(â¼´Ž8Š¹ÿ¢á1
-L	java:S106G"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8‹¹ÿ¢á1
+java:S2119*"Save and re-use this "Random".(¼ÝÅf8šéš£á1
+L	java:S106-"+Replace this use of System.out by a logger.(ÉŒÎêøÿÿÿÿ8¨»–£á1
+X	java:S125B"<This block of commented-out lines of code should be removed.(â¼´Ž8¨éš£á1
+L	java:S106G"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8©éš£á1
