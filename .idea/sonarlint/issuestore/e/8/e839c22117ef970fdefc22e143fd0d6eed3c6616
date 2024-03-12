@@ -1,10 +1,10 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“
-E	java:S106"+Replace this use of System.out by a logger.(‹½¼Òıÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(£¶‹Íúÿÿÿÿ
-i
-java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ
-^
-java:S1182"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ
-O
-java:S1172)"4Remove these unused method parameters "src", "dest".(é¼µáıÿÿÿÿ
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“J$86ea0584-d539-4d1f-8965-4120aa90c54a
+k	java:S106"+Replace this use of System.out by a logger.(‹½¼ÒıÿÿÿÿJ$80da4021-b692-49fa-abc3-6085128b2136
+k	java:S106"+Replace this use of System.out by a logger.(£¶‹ÍúÿÿÿÿJ$491cc759-0578-4163-83dd-61a70d947efc
+
+java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞJ$e834aecc-d086-4510-a5aa-1dde5436373f
+„
+java:S1182"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞJ$329c89a5-bd20-48ca-b78a-a4a2d5becb0a
+u
+java:S1172)"4Remove these unused method parameters "src", "dest".(é¼µáıÿÿÿÿJ$752777b9-f3f0-4676-893b-3ebc95a8eaf1

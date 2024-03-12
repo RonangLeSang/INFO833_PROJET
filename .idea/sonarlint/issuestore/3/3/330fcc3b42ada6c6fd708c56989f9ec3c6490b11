@@ -1,14 +1,12 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÁ´û8ˆ·Âã1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8Š·Âã1
-E
-java:S1659"(Declare "currentApp" on a separate line.(ÆÁ´û8œ·Âã1
-I
-java:S1481"-Remove this unused "helloMsg" local variable.(´Éô98œ·Âã1
-G	java:S106!"+Replace this use of System.err by a logger.(­ğˆ8·Âã1
-:
-java:S2119*"Save and re-use this "Random".(¼İÅf8Ÿ·Âã1
-M
-java:S1481@"0Remove this unused "hashmapInit" local variable.(Ÿá»ğ8£·Âã1
-L	java:S106H"+Replace this use of System.out by a logger.(şà‰ªøÿÿÿÿ8¥·Âã1
-]	java:S125E"<This block of commented-out lines of code should be removed.(õ“•Œúÿÿÿÿ8¥·Âã1
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÁ´û8ûÛË”ã1J$0f609d40-0435-4e05-b44c-0f60f14c6615
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8şÛË”ã1J$f345a828-a4f0-43cd-8da5-de87bdda3e7d
+k
+java:S1659"(Declare "currentApp" on a separate line.(ÆÁ´û8™ÜË”ã1J$f713c475-de08-4fd7-bc74-3f98300d03ee
+m	java:S106 "+Replace this use of System.err by a logger.(­ğˆ8›ÜË”ã1J$1c1a7f25-3096-43ae-8930-d14146d7b92b
+`
+java:S2119)"Save and re-use this "Random".(¼İÅf8ŸÜË”ã1J$b9c160b1-c1b1-470e-ad5c-9dad8a3d7849
+r	java:S106="+Replace this use of System.out by a logger.(¯™Çöûÿÿÿÿ8¦ÜË”ã1J$c9ac236d-1a64-4ab7-a8c2-76dd23d75f94
+ƒ	java:S125@"<This block of commented-out lines of code should be removed.(ô˜Ô¤ùÿÿÿÿ8¨ÜË”ã1J$e826d70a-1098-4a0c-9333-49d30839f3b6
+r	java:S106H"+Replace this use of System.out by a logger.(şà‰ªøÿÿÿÿ8©ÜË”ã1J$0fb469df-d4b5-4a1c-94f8-34e79eb22d53
+ƒ	java:S125E"<This block of commented-out lines of code should be removed.(õ“•Œúÿÿÿÿ8©ÜË”ã1J$147c8f99-40ed-4d43-b9fb-ef632c7c2be0

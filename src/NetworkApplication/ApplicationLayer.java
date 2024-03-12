@@ -24,17 +24,18 @@ public class ApplicationLayer implements EDProtocol {
     //prefixe de la couche (nom de la variable de protocole du fichier de config)
     private String prefix;
 
+    //Form of the hashmap: <Index, Id>
     private HashMap<Integer, Integer> rightNeighbour;
 
     private HashMap<Integer, Integer> leftNeighbour;
 
 
     public ApplicationLayer(String prefix) {
-	this.prefix = prefix;
-	//initialisation des identifiants a partir du fichier de configuration
-	this.transportPid = Configuration.getPid(prefix + ".transport");
-	this.mypid = Configuration.getPid(prefix + ".myself");
-	this.transport = null;
+        this.prefix = prefix;
+        //initialisation des identifiants a partir du fichier de configuration
+        this.transportPid = Configuration.getPid(prefix + ".transport");
+        this.mypid = Configuration.getPid(prefix + ".myself");
+        this.transport = null;
     }
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
@@ -46,13 +47,14 @@ public class ApplicationLayer implements EDProtocol {
                 setNeighbours((int)message.get("srcIndex"), (int)message.get("reqIndex"), (int)message.get("reqID"));
                 break;
             case 1:
-                if (message.get("srcID")==leftNeighbour.get("srcID")) {
+                if (message.get("srcID")==leftNeighbour.values().iterator().next()) {
                     setLeftNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
                 } else {
                     setRightNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
                 }
+                break;
             default:
-                if ((int)message.get("srcId") < getNodeId()) {
+                if ((int)message.get("srcID") < getNodeId()) {
                     setLeftNeighbourFromInt((int)message.get("srcID"), (int)message.get("srcIndex"));
                     setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
                 } else {
@@ -133,16 +135,14 @@ public class ApplicationLayer implements EDProtocol {
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
     public Object clone() {
-
-	ApplicationLayer dolly = new ApplicationLayer(this.prefix);
-
-	return dolly;
+        ApplicationLayer dolly = new ApplicationLayer(this.prefix);
+        return dolly;
     }
 
     //liaison entre un objet de la couche applicative et un 
     //objet de la couche transport situes sur le meme noeud
     public void setTransportLayer(int index) {
-	this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
+        this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
     }
 
     //envoi d'un message (l'envoi se fait via la couche transport)
@@ -152,12 +152,12 @@ public class ApplicationLayer implements EDProtocol {
 
     //affichage a la reception
     private void receive(Object msg) {
-	System.out.println(this + ": Received " + msg);
+        System.out.println(this + ": Received " + msg);
     }
 
     //retourne le noeud courant
     private Node getMyNode() {
-	return Network.get(this.nodeId);
+        return Network.get(this.nodeId);
     }
 
     public int getMypid() {
