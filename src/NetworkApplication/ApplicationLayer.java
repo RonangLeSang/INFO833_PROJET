@@ -38,13 +38,29 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
-    public void processEvent( Node node, int pid, Object event ) {
-//        this.receive((Object)event);
-
-        HashMap nodeTmp = (HashMap)event;
-        System.out.println(nodeTmp);
-//        ApplicationLayer appTmp = (ApplicationLayer)Network.get(nodeTmp.get("reqIndex")).getProtocol(0);
-//        System.out.println("message reçu de : " + appTmp.getNodeId() + " sur : " + nodeId + " contenu : " + event);
+    public void processEvent( Node node, int pid, Object receivedMessage) {
+        HashMap message = (HashMap)receivedMessage;
+        System.out.println(message);
+        switch ((int)message.get("type")){
+            case 0:
+                setNeighbours((int)message.get("srcIndex"), (int)message.get("reqIndex"), (int)message.get("reqID"));
+                break;
+            case 1:
+                if (message.get("srcID")==leftNeighbour.get("srcID")) {
+                    setLeftNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
+                } else {
+                    setRightNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
+                }
+            default:
+                if ((int)message.get("srcId") < getNodeId()) {
+                    setLeftNeighbourFromInt((int)message.get("srcID"), (int)message.get("srcIndex"));
+                    setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
+                } else {
+                    setLeftNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
+                    setRightNeighbourFromInt((int)message.get("srcID"), (int)message.get("srcIndex"));
+                }
+                break;
+        }
     }
 
     public int getNodeId() {
@@ -58,12 +74,14 @@ public class ApplicationLayer implements EDProtocol {
     public void setRightNeighbourFromInt( int nodeId, int nodeIndex){
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
+        System.out.println("right maj " + newHashMap);
         setRightNeighbour(newHashMap);
     }
 
     public void setLeftNeighbourFromInt( int nodeId, int nodeIndex){
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
+        System.out.println("left maj " + newHashMap);
         setLeftNeighbour(newHashMap);
     }
 
@@ -76,6 +94,7 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     private boolean isFirstNode(){
+        System.out.println(" | " + leftNeighbour.keySet().iterator().next() + " | " + rightNeighbour.keySet().iterator().next() + " | " + getNodeId());
         return Objects.equals(leftNeighbour.keySet().iterator().next(), rightNeighbour.keySet().iterator().next()) && rightNeighbour.keySet().iterator().next() == getNodeId();
     }
 
@@ -85,21 +104,31 @@ public class ApplicationLayer implements EDProtocol {
         message.put("srcID", getNodeId());
         message.put("reqIndex", reqIndex);
         message.put("reqID", reqID);
+        message.put("type", 1);
         int destIndex = srcIndex;
 
         if (isFirstNode()){
-            HashMap
-            leftNeighbour;
+            setRightNeighbourFromInt(reqID, reqIndex);
+            setLeftNeighbourFromInt(reqID, reqIndex);
         } else if (reqID < getNodeId()) {
                 destIndex = leftNeighbour.values().iterator().next();
                 if (reqID > leftNeighbour.keySet().iterator().next()) {
-                    ;
+                    transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
+                    message.put("type", 2);
+                    message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
+                    message.put("newConnectionIndex", destIndex);
+                    transport.send(Network.get(srcIndex), Network.get(reqIndex), message, 0);
+                    setLeftNeighbourFromInt(reqID, reqIndex);
                 }
             } else {
                 destIndex = rightNeighbour.values().iterator().next();
+                if (reqID < rightNeighbour.keySet().iterator().next()) {
+                    setRightNeighbourFromInt(reqID, reqIndex);
+                }
             }
-        System.out.println("sout : " + leftNeighbour.values().iterator().next());
+        message.put("type", 0);
         transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
+//        System.out.println("id " + getNodeId() + "\n left " + leftNeighbour + "\n right " + rightNeighbour);
     }
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)

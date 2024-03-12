@@ -60,6 +60,10 @@ public class Initializer implements peersim.core.Control {
 	    currentNode = Network.get(nodeIndex);
 	    currentApp = (ApplicationLayer)currentNode.getProtocol(0);
 	    currentApp.setTransportLayer(nodeIndex);
+
+		HashMap<Integer, Integer> hashmapInit;
+		currentApp.setRightNeighbour(firstNeighbour);
+		currentApp.setLeftNeighbour(firstNeighbour);
 		ApNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
 	}
 //	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);

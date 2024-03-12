@@ -1,32 +1,40 @@
 
-Q
-java:S3740,"/Provide the parametrized type for this generic.(‰òóÿÿÿÿÿ8ŠÑÍã1
 L
-java:S3740["/Provide the parametrized type for this generic.(ü”½û8‹ÑÍã1
+java:S3740*"/Provide the parametrized type for this generic.(†öã°8¢ß°‘ã1
+r
+java:S11929"PDefine a constant instead of duplicating this literal "newConnectionID" 3 times.(Ú«Áşÿÿÿÿ8¤‘¸‘ã1
+k
+java:S1192."IDefine a constant instead of duplicating this literal "reqIndex" 4 times.(•½È—ûÿÿÿÿ8£ß°‘ã1
+h
+java:S11921"FDefine a constant instead of duplicating this literal "srcID" 5 times.(ÓÈ½¡úÿÿÿÿ8£ß°‘ã1
+k
+java:S1192."IDefine a constant instead of duplicating this literal "srcIndex" 4 times.(•½È—ûÿÿÿÿ8£ß°‘ã1
+u
+java:S11929"SDefine a constant instead of duplicating this literal "newConnectionIndex" 3 times.(Ú«Áşÿÿÿÿ8¥‘¸‘ã1
+h
+java:S1192."FDefine a constant instead of duplicating this literal "reqID" 4 times.(•½È—ûÿÿÿÿ8Ëÿµ‘ã1
 ˆ
-java:S1319F"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8‹ÑÍã1
+java:S1319X"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8¥ß°‘ã1
 Œ
-java:S1319J"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8‹ÑÍã1
-
-java:S1488l"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8ŒÑÍã1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ÑÍã1
-X	java:S125*"<This block of commented-out lines of code should be removed.(ëŒºè8 ÑÍã1
-G	java:S106-"+Replace this use of System.out by a logger.(¶ºÏ»8¡ÑÍã1
-]	java:S125."<This block of commented-out lines of code should be removed.(Òûÿÿÿÿ8¡ÑÍã1
-^
-java:S1117\"ARename "leftNeighbour" which hides the field declared at line 29.(Âî’§8ªÑÍã1
-O
-java:S1481\"2Remove this unused "leftNeighbour" local variable.(Âî’§8ªÑÍã1
->
-java:S1116`"Remove this empty statement.(Åñ­õşÿÿÿÿ8¬ÑÍã1
-L	java:S106e"+Replace this use of System.out by a logger.(œ•¨üÿÿÿÿ8­ÑÍã1
-p
-java:S2975j"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8®ÑÍã1
-e
-java:S1182j"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8¯ÑÍã1
-X	java:S125x"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8°ÑÍã1
-G	java:S106~"+Replace this use of System.out by a logger.(şâì8±ÑÍã1
-I
-java:S1144}",Remove this unused private "receive" method.(Ä‰¥Ù8²ÑÍã1
+java:S1319\"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8¥ß°‘ã1
+€
+java:S1488‰"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8¥ß°‘ã1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¦ß°‘ã1
+L	java:S106+"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8µß°‘ã1
+m	java:S1280"LEnd this switch case with an unconditional break, return or throw statement.(ªëÅŞúÿÿÿÿ8µß°‘ã1
+n
+java:S21751"LA "HashMap<Integer, Integer>" cannot contain a "String" in a "Integer" type.(ÓÈ½¡úÿÿÿÿ8¶ß°‘ã1
+G	java:S106M"+Replace this use of System.out by a logger.(ËüÚ·8ºß°‘ã1
+L	java:S106T"+Replace this use of System.out by a logger.(’ğ¸çúÿÿÿÿ8¼ß°‘ã1
+L	java:S106a"+Replace this use of System.out by a logger.(‡ÃìÙÿÿÿÿÿ8¾ß°‘ã1
+Y	java:S125ƒ"<This block of commented-out lines of code should be removed.(Øœ°¸8Æß°‘ã1
+q
+java:S2975‡"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8Çß°‘ã1
+f
+java:S1182‡"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8Çß°‘ã1
+Y	java:S125•"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8Éß°‘ã1
+H	java:S106›"+Replace this use of System.out by a logger.(şâì8Éß°‘ã1
+J
+java:S1144š",Remove this unused private "receive" method.(Ä‰¥Ù8Ëß°‘ã1
 Q
-java:S1144‚".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8²ÑÍã1
+java:S1144Ÿ".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8Ëß°‘ã1
