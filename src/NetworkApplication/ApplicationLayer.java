@@ -5,6 +5,7 @@ import peersim.core.*;
 import peersim.config.*;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class ApplicationLayer implements EDProtocol {
     
@@ -40,9 +41,10 @@ public class ApplicationLayer implements EDProtocol {
     public void processEvent( Node node, int pid, Object event ) {
 //        this.receive((Object)event);
 
-        Node nodeTmp = (Node)event;
-        ApplicationLayer appTmp = (ApplicationLayer)nodeTmp.getProtocol(0);
-        System.out.println("message reçu de : " + appTmp.getNodeId() + " sur : " + nodeId + " contenu : " + event);
+        HashMap nodeTmp = (HashMap)event;
+        System.out.println(nodeTmp);
+//        ApplicationLayer appTmp = (ApplicationLayer)Network.get(nodeTmp.get("reqIndex")).getProtocol(0);
+//        System.out.println("message reçu de : " + appTmp.getNodeId() + " sur : " + nodeId + " contenu : " + event);
     }
 
     public int getNodeId() {
@@ -53,6 +55,18 @@ public class ApplicationLayer implements EDProtocol {
         this.nodeId = nodeId;
     }
 
+    public void setRightNeighbourFromInt( int nodeId, int nodeIndex){
+        HashMap<Integer, Integer> newHashMap = new HashMap<>();
+        newHashMap.put(nodeId, nodeIndex);
+        setRightNeighbour(newHashMap);
+    }
+
+    public void setLeftNeighbourFromInt( int nodeId, int nodeIndex){
+        HashMap<Integer, Integer> newHashMap = new HashMap<>();
+        newHashMap.put(nodeId, nodeIndex);
+        setLeftNeighbour(newHashMap);
+    }
+
     public void setRightNeighbour(HashMap<Integer, Integer> rightNeighbour) {
         this.rightNeighbour = rightNeighbour;
     }
@@ -61,20 +75,31 @@ public class ApplicationLayer implements EDProtocol {
         this.leftNeighbour = leftNeighbour;
     }
 
-    public void setNeighbours(Node node, int SrcIndex) {
+    private boolean isFirstNode(){
+        return Objects.equals(leftNeighbour.keySet().iterator().next(), rightNeighbour.keySet().iterator().next()) && rightNeighbour.keySet().iterator().next() == getNodeId();
+    }
+
+    public void setNeighbours(int srcIndex, int reqIndex, int reqID) {
         HashMap<String, Integer> message = new HashMap<>();
-        message.put("srcIndex", SrcIndex);
+        message.put("srcIndex", srcIndex);
         message.put("srcID", getNodeId());
-        System.out.println( leftNeighbour.keySet().iterator().next());
-        if (SrcIndex < nodeId) {
-            int reqIndex = leftNeighbour.keySet().iterator().next();
-            message.put("reqIndex", reqIndex);
-            message.put("reqID", leftNeighbour.get(reqIndex));
-            //A changer
-            transport.send(Network.get(0), Network.get(5), Network.get(0), 0);
-        } else {
-            transport.send(getMyNode(), Network.get(rightNeighbour.get("index")), new Message(Message.HELLOWORLD, "Hello!!"), this.mypid);
-        }
+        message.put("reqIndex", reqIndex);
+        message.put("reqID", reqID);
+        int destIndex = srcIndex;
+
+        if (isFirstNode()){
+            HashMap
+            leftNeighbour;
+        } else if (reqID < getNodeId()) {
+                destIndex = leftNeighbour.values().iterator().next();
+                if (reqID > leftNeighbour.keySet().iterator().next()) {
+                    ;
+                }
+            } else {
+                destIndex = rightNeighbour.values().iterator().next();
+            }
+        System.out.println("sout : " + leftNeighbour.values().iterator().next());
+        transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
     }
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
@@ -92,9 +117,9 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     //envoi d'un message (l'envoi se fait via la couche transport)
-    public void send(Message msg, Node dest) {
-	this.transport.send(getMyNode(), dest, msg, this.mypid);
-    }
+//    public void send(Message msg, Node dest) {
+//	this.transport.send(getMyNode(), dest, msg, this.mypid);
+//    }
 
     //affichage a la reception
     private void receive(Object msg) {

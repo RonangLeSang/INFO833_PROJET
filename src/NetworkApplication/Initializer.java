@@ -23,8 +23,8 @@ public class Initializer implements peersim.core.Control {
 
     public boolean execute() {
 	int nodeNb;
-	ApplicationLayer ApNodeInit, current;
-	Node dest;
+	ApplicationLayer ApNodeInit, currentApp;
+	Node currentNode;
 	Message helloMsg;
 
 	nodeNb = Network.size();
@@ -42,30 +42,27 @@ public class Initializer implements peersim.core.Control {
 	Random random = new Random();
 	for (int i = 0; i < nodeNb; i++) {
 		int randomNumber = random.nextInt(1000, 9999);
-		System.out.println(randomNumber);
-		dest = Network.get(i);
-		current = (ApplicationLayer)dest.getProtocol(this.helloWorldPid);
-		current.setNodeId(randomNumber);
+		currentNode = Network.get(i);
+		currentApp = (ApplicationLayer)currentNode.getProtocol(this.helloWorldPid);
+		currentApp.setNodeId(randomNumber);
 	}
 
-	HashMap<Integer, Integer> rightNeighbour = new HashMap<>();
+	HashMap<Integer, Integer> firstNeighbour = new HashMap<>();
 	ApplicationLayer app = (ApplicationLayer)Network.get(0).getProtocol(0);
-	rightNeighbour.put(app.getNodeId(), 0);
+	firstNeighbour.put(app.getNodeId(), 0);
 
-		ApNodeInit.setRightNeighbour(rightNeighbour);
-		ApNodeInit.setLeftNeighbour(rightNeighbour);
+	ApNodeInit.setRightNeighbour(firstNeighbour);
+	ApNodeInit.setLeftNeighbour(firstNeighbour);
 
 	//pour chaque noeud, on fait le lien entre la couche applicative et la couche transport
 	//puis on fait envoyer au noeud 0 un message "Hello"
-	for (int i = 1; i < nodeNb; i++) {
-	    dest = Network.get(i);
-	    current = (ApplicationLayer)dest.getProtocol(0);
-	    current.setTransportLayer(i);
-		ApNodeInit.setNeighbours(dest, 0);
+	for (int nodeIndex = 1; nodeIndex < nodeNb; nodeIndex++) {
+	    currentNode = Network.get(nodeIndex);
+	    currentApp = (ApplicationLayer)currentNode.getProtocol(0);
+	    currentApp.setTransportLayer(nodeIndex);
+		ApNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
 	}
-//	dest.setNeighbours(Network.get(1));
-	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);
-	tmp.send(Network.get(0), Network.get(5), Network.get(0), 0);
+//	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);
 
 
 	System.out.println("Initialization completed");
