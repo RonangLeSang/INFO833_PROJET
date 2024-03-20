@@ -36,14 +36,13 @@ public class Initializer implements peersim.core.Control {
 		Node currentNode;
 		ApplicationLayer currentApp;
 		Random random = new Random();
-		int j = 0;
 		for (int i = 0; i < nodeNb; i++) {
 //			int randomNumber = random.nextInt(1000, 9999);
 			currentNode = Network.get(i);
 			currentApp = (ApplicationLayer)currentNode.getProtocol(this.helloWorldPid);
 //			currentApp.setNodeId(randomNumber);
-			currentApp.setNodeId(j);
-			j++;
+			currentApp.setNodeId(i);
+			currentApp.setIndex(i);
 		}
 	}
 
@@ -54,6 +53,8 @@ public class Initializer implements peersim.core.Control {
 		int nodeNb = Network.size();
 		Node currentNode;
 		ApplicationLayer currentApp;
+
+		int delay = 500; // Set the initial delay
 
 		for (int nodeIndex = 1; nodeIndex < nodeNb; nodeIndex++) {
 			currentNode = Network.get(nodeIndex);
@@ -68,11 +69,12 @@ public class Initializer implements peersim.core.Control {
 			msg.put("reqID", currentApp.getNodeId());
 			System.out.println("base msg : " + msg);
 
-//			apNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
-			apNodeInit.getTransport().send(currentNode, Network.get(0), new HashMap<>(msg), 0);
+			// Add the message with a delay
+			EDSimulator.add(delay, new HashMap<>(msg), Network.get(0), 0);
 
-			displayDHT();
-		}
+			// Increment the delay for the next message
+			delay += 500;
+			}
 	}
 
 	public void displayDHT(){

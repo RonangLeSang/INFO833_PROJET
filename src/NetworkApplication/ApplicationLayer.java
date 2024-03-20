@@ -23,6 +23,7 @@ public class ApplicationLayer implements EDProtocol {
 
     //prefixe de la couche (nom de la variable de protocole du fichier de config)
     private String prefix;
+    private int index;
 
     //key : nodeID
     //value : nodeIndex
@@ -50,12 +51,21 @@ public class ApplicationLayer implements EDProtocol {
         return transport;
     }
 
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
 
     // type du message :
     // 0 -> requête pour trouver sa place
     // 1 -> requête d'insertion de noeuds
     // 2 -> une fois le noeud placé, oon informe les autres noeuds de son arrivé
+    // 3 -> setBothNeighbours
     public void processEvent( Node node, int pid, Object receivedMessage) {
 
         String reqIndex = "reqIndex";
@@ -69,7 +79,7 @@ public class ApplicationLayer implements EDProtocol {
         switch ((int)message.get("type")){
             case 0:
                 System.out.println("case 0");
-                setNeighbours((int)message.get(srcIndex), (int)message.get(reqIndex), (int)message.get(reqID));
+                setNeighbours((int)message.get(reqIndex), (int)message.get(reqID));
                 break;
             case 1:
                 System.out.println("case 1");
@@ -148,13 +158,13 @@ public class ApplicationLayer implements EDProtocol {
         return rightNeighbour.keySet().iterator().next() < nodeId;
     }
 
-    public void setNeighbours(int srcIndex, int reqIndex, int reqID) {
+    public void setNeighbours(int reqIndex, int reqID) {
         HashMap<String, Integer> message = new HashMap<>();
-        message.put("srcIndex", srcIndex);
+        message.put("srcIndex", index);
         message.put("srcID", getNodeId());
         message.put("reqIndex", reqIndex);
         message.put("reqID", reqID);
-        Node nodeSrc = Network.get(srcIndex);
+        Node nodeSrc = Network.get(index);
 
         // fait
         if (isFirstNode()){ // cas ou on a une seule node
