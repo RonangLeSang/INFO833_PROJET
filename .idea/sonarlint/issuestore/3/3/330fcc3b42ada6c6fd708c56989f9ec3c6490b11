@@ -1,16 +1,19 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÁ´û8ÎÿÚå1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8›ÎÿÚå1
-E
-java:S1659"(Declare "currentApp" on a separate line.(ÆÁ´û8·ÏÿÚå1
-I
-java:S1481"-Remove this unused "helloMsg" local variable.(´Éô98¹ÏÿÚå1
-G	java:S106!"+Replace this use of System.err by a logger.(­ğˆ8¾ÏÿÚå1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¡ÿñáå1
 :
-java:S2119*"Save and re-use this "Random".(¼İÅf8ÈÏÿÚå1
+java:S2119%"Save and re-use this "Random".(¼İÅf8š¥öáå1
 M
-java:S1481@"0Remove this unused "hashmapInit" local variable.(Ÿá»ğ8ÖÏÿÚå1
-G	java:S106E"+Replace this use of System.out by a logger.(µõ™8ÙÏÿÚå1
-G	java:S106J"+Replace this use of System.out by a logger.(ğÔ‘¬8İÏÿÚå1
-L	java:S106O"+Replace this use of System.out by a logger.(şà‰ªøÿÿÿÿ8àÏÿÚå1
-]	java:S125L"<This block of commented-out lines of code should be removed.(õ“•Œúÿÿÿÿ8áÏÿÚå1
+java:S14817"0Remove this unused "hashmapInit" local variable.(Ÿá»ğ8¥öáå1
+L	java:S106C"+Replace this use of System.out by a logger.(ÂÌ “ıÿÿÿÿ8Áÿñáå1
+G	java:S106H"+Replace this use of System.out by a logger.(ğÔ‘¬8Ÿ¥öáå1
+E
+java:S1659M"(Declare "currentApp" on a separate line.(–°çğ8Ÿ¥öáå1
+L
+java:S1481M"/Remove this unused "currentApp" local variable.(–°çğ8 ¥öáå1
+R
+java:S1481N"0Remove this unused "currentNode" local variable.(Å‚ÌÉøÿÿÿÿ8 ¥öáå1
+I
+java:S1481O"-Remove this unused "helloMsg" local variable.(´Éô98 ¥öáå1
+G	java:S106S"+Replace this use of System.err by a logger.(­ğˆ8 ¥öáå1
+L	java:S106b"+Replace this use of System.out by a logger.(şà‰ªøÿÿÿÿ8¢¥öáå1
+]	java:S125_"<This block of commented-out lines of code should be removed.(õ“•Œúÿÿÿÿ8Áÿñáå1

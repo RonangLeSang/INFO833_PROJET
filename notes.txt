@@ -1,0 +1,18 @@
+
+type du message :
+0 -> requête pour trouver sa place
+1 -> requête d'insertion de noeuds
+2 -> une fois le noeud placé, on informe les autres noeuds de son arrivé
+
+send(Node src, Node dest, Object msg, int pid)
+
+"newConnectionID", leftNeighbour.keySet().iterator().next()
+"newConnectionIndex", destIndex
+"srcIndex", srcIndex
+"srcID", getNodeId()
+"reqIndex", reqIndex
+"reqID", reqID
+"type", 1
+
+
+faire une fonction setBothNeighbours avec un cas pour set les voisins en début et en fin de DHT

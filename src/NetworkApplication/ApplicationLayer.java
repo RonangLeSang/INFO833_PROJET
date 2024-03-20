@@ -114,10 +114,12 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     private boolean isDHTBeginning(){
+        System.out.println("first");
         return leftNeighbour.keySet().iterator().next() > nodeId;
     }
 
     private boolean isDHTEnding(){
+        System.out.println("last");
         return rightNeighbour.keySet().iterator().next() < nodeId;
     }
 
@@ -127,32 +129,34 @@ public class ApplicationLayer implements EDProtocol {
         message.put("srcID", getNodeId());
         message.put("reqIndex", reqIndex);
         message.put("reqID", reqID);
-        message.put("type", 1);
-        int destIndex = srcIndex;
-        Node destination = Network.get(destIndex);
+        Node nodeSrc = Network.get(srcIndex);
+//        message.put("type", 1);
+//        int destIndex = srcIndex;
+//        Node destination = Network.get(destIndex);
 
+        // fait
         if (isFirstNode()){ // cas ou on a une seule node
             setRightNeighbourFromInt(reqID, reqIndex);
             setLeftNeighbourFromInt(reqID, reqIndex);
+
+
         } else if (reqID < getNodeId()) { // si on est pas le premier noeud, et que il faut envoyer la requête à gauche
-            destIndex = leftNeighbour.values().iterator().next();
-            if (reqID > leftNeighbour.keySet().iterator().next()) { // on insert le noeud à gauche
-                transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
-                message.put("type", 2);
-                message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
-                message.put("newConnectionIndex", destIndex);
-//                    transport.send(Network.get(srcIndex), Network.get(reqIndex), message, 0);
-                setLeftNeighbourFromInt(reqID, reqIndex);
-                destination = Network.get(reqIndex);
+            if (isDHTBeginning()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
+                transport.send(nodeSrc, Network.get(reqIndex), message, 0); // on envoi au noeud souhaitant s'insérer l'ordre de le faire
             }
+            if (reqID > leftNeighbour.keySet().iterator().next()) { // on insert le noeud à gauche
+
+            }
+
         } else { // si on est pas le premier noeud, et que il faut envoyer la requête à droite
-            destIndex = rightNeighbour.values().iterator().next();
+            if (isDHTEnding()) { // cas ou on est à la fin de la DHT -> on insère le noeud directement à droite
+                ;
+            }
             if (reqID < rightNeighbour.keySet().iterator().next()) { // on insert le noeud à droite
-                setRightNeighbourFromInt(reqID, reqIndex);
             }
         }
         message.put("type", 0);
-        transport.send(Network.get(srcIndex), destination, message, 0);
+//        transport.send(Network.get(srcIndex), destination, message, 0);
 //        System.out.println("id " + getNodeId() + "\n left " + leftNeighbour + "\n right " + rightNeighbour);
     }
 
