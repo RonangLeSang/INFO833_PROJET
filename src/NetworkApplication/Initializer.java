@@ -36,11 +36,14 @@ public class Initializer implements peersim.core.Control {
 		Node currentNode;
 		ApplicationLayer currentApp;
 		Random random = new Random();
+		int j = 0;
 		for (int i = 0; i < nodeNb; i++) {
-			int randomNumber = random.nextInt(1000, 9999);
+//			int randomNumber = random.nextInt(1000, 9999);
 			currentNode = Network.get(i);
 			currentApp = (ApplicationLayer)currentNode.getProtocol(this.helloWorldPid);
-			currentApp.setNodeId(randomNumber);
+//			currentApp.setNodeId(randomNumber);
+			currentApp.setNodeId(j);
+			j++;
 		}
 	}
 

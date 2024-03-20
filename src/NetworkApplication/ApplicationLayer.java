@@ -64,8 +64,8 @@ public class ApplicationLayer implements EDProtocol {
         String srcIndex = "srcIndex";
 
         HashMap message = (HashMap)receivedMessage;
-        System.out.println("recu : " + message);
-        System.out.println("message type : " + (int)message.get("type"));
+//        System.out.println("recu : " + message);
+//        System.out.println("message type : " + (int)message.get("type"));
         switch ((int)message.get("type")){
             case 0:
                 System.out.println("case 0");
@@ -165,7 +165,6 @@ public class ApplicationLayer implements EDProtocol {
 
         } else if (reqID < getNodeId()) { // si on est pas le premier noeud, et que il faut envoyer la requête à gauche
             if (isDHTBeginning() || reqID > leftNeighbour.keySet().iterator().next()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
-                System.out.println();
 
                 message.put("type", 1);
                 transport.send(nodeSrc, Network.get(leftNeighbour.values().iterator().next()), new HashMap<>(message), 0);
