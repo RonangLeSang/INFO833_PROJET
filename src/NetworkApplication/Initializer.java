@@ -5,6 +5,7 @@ import peersim.config.*;
 
 import java.util.HashMap;
 import java.util.Random;
+import peersim.edsim.EDSimulator;
 
 /*
   Module d'initialisation de helloWorld: 
@@ -44,16 +45,27 @@ public class Initializer implements peersim.core.Control {
 	}
 
 	public void setTransportAndNeighbours(ApplicationLayer apNodeInit){
+		HashMap<String, Integer> msg = new HashMap<>();
+		msg.put("type", 0);
+		EDSimulator.add(0, msg, Network.get(0), 0);
 		int nodeNb = Network.size();
 		Node currentNode;
 		ApplicationLayer currentApp;
+
 		for (int nodeIndex = 1; nodeIndex < nodeNb; nodeIndex++) {
 			currentNode = Network.get(nodeIndex);
 			currentApp = (ApplicationLayer)currentNode.getProtocol(0);
 			currentApp.setTransportLayer(nodeIndex);
+			currentApp.setLeftNeighbourFromInt(currentApp.getNodeId(), nodeIndex);
+			currentApp.setRightNeighbourFromInt(currentApp.getNodeId(), nodeIndex);
 
-			HashMap<Integer, Integer> hashmapInit;
-			apNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
+			msg.put("srcIndex", nodeIndex);
+			msg.put("srcID", currentApp.getNodeId());
+			msg.put("reqIndex", nodeIndex);
+			msg.put("reqID", currentApp.getNodeId());
+
+//			apNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
+			apNodeInit.getTransport().send(currentNode, Network.get(0), new HashMap<>(msg), 0);
 
 			displayDHT();
 		}
@@ -74,9 +86,7 @@ public class Initializer implements peersim.core.Control {
 
     public boolean execute() {
 	int nodeNb;
-	ApplicationLayer apNodeInit, currentApp;
-	Node currentNode;
-	Message helloMsg;
+	ApplicationLayer apNodeInit;
 
 	nodeNb = Network.size();
 	if (nodeNb < 1) {
@@ -92,10 +102,9 @@ public class Initializer implements peersim.core.Control {
 	initFirstNeighbours(apNodeInit);
 
 	setTransportAndNeighbours(apNodeInit);
-//	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);
-
-
 	System.out.println("Initialization completed");
+	displayDHT();
 	return false;
     }
 }
+

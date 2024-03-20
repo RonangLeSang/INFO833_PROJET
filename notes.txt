@@ -3,6 +3,7 @@ type du message :
 0 -> requête pour trouver sa place
 1 -> requête d'insertion de noeuds
 2 -> une fois le noeud placé, on informe les autres noeuds de son arrivé
+3 -> setBothNeighbours
 
 send(Node src, Node dest, Object msg, int pid)
 

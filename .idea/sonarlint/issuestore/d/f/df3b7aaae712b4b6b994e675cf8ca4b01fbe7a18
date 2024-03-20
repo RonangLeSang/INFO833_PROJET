@@ -1,32 +1,36 @@
 
 L
-java:S37407"/Provide the parametrized type for this generic.(†öã°8ÅÊÑÛå1
+java:S3740C"/Provide the parametrized type for this generic.(†öã°8Á¿Èäå1
+
+java:S1319!"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(íÏÒüøÿÿÿÿ8Ã¿Èäå1
+
+java:S1319%"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ü³ˆşÿÿÿÿ8Ã¿Èäå1
 ˆ
-java:S1319g"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8ÈÊÑÛå1
+java:S1319z"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8Ã¿Èäå1
 Œ
-java:S1319k"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8ÈÊÑÛå1
+java:S1319~"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8Ã¿Èäå1
 €
-java:S1488¥"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8ÉÊÑÛå1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ÍÊÑÛå1
-]	java:S1258"<This block of commented-out lines of code should be removed.(´İ•şÿÿÿÿ8÷ÊÑÛå1
-L	java:S106>"+Replace this use of System.out by a logger.(”÷¬âûÿÿÿÿ8úÊÑÛå1
-G	java:S106\"+Replace this use of System.out by a logger.(ËüÚ·8†ËÑÛå1
-L	java:S106c"+Replace this use of System.out by a logger.(’ğ¸çúÿÿÿÿ8‡ËÑÛå1
-]	java:S125p"<This block of commented-out lines of code should be removed.(ÚÀä±ûÿÿÿÿ8ŠËÑÛå1
-G	java:S106u"+Replace this use of System.out by a logger.(Ö­¹Ø8·ÒÃßå1
-G	java:S106z"+Replace this use of System.out by a logger.(íËƒò8¸ÒÃßå1
-Y	java:S125…"<This block of commented-out lines of code should be removed.(šâ–í8ó¥öáå1
+java:S1488²"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8Ä¿Èäå1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8Æ¿Èäå1
+L	java:S106D"+Replace this use of System.out by a logger.(’¬“ıÿÿÿÿ8ñ¿Èäå1
+L	java:S106E"+Replace this use of System.out by a logger.(ü«‰†ùÿÿÿÿ8ô¿Èäå1
+C	java:S131F""Add a default case to this switch.(¬÷„œúÿÿÿÿ8ôòàåå1
+L	java:S106H"+Replace this use of System.out by a logger.(»ş¹ûûÿÿÿÿ8ö¿Èäå1
+G	java:S106L"+Replace this use of System.out by a logger.(Ë‹½»8÷¿Èäå1
+L	java:S106M"+Replace this use of System.out by a logger.(”÷¬âûÿÿÿÿ8ú¿Èäå1
+L	java:S106U"+Replace this use of System.out by a logger.(¾ÍêÇşÿÿÿÿ8€ÀÈäå1
+G	java:S106_"+Replace this use of System.out by a logger.(õÙ°ñ8€ÀÈäå1
+^	java:S125ƒ"<This block of commented-out lines of code should be removed.(ÚÀä±ûÿÿÿÿ8’ñØåå1
 ?
-java:S1116™"Remove this empty statement.(Åñ­õşÿÿÿÿ8õ¥öáå1
-^	java:S125Ÿ"<This block of commented-out lines of code should be removed.(Äã‘°üÿÿÿÿ8´ÒÃßå1
+java:S1116¨"Remove this empty statement.(Åñ­õşÿÿÿÿ8—ÀÈäå1
 q
-java:S2975¤"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8´ÒÃßå1
+java:S2975±"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8«ÀÈäå1
 f
-java:S1182¤"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8µÒÃßå1
-Y	java:S125°"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8·ÒÃßå1
-H	java:S106¶"+Replace this use of System.out by a logger.(şâì8ø¥öáå1
-M	java:S106Ã"+Replace this use of System.out by a logger.(›ôÊøıÿÿÿÿ8ú¥öáå1
+java:S1182±"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8¬ÀÈäå1
+Y	java:S125½"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8­ÀÈäå1
+H	java:S106Ã"+Replace this use of System.out by a logger.(şâì8†„©åå1
+M	java:S106Ğ"+Replace this use of System.out by a logger.(›ôÊøıÿÿÿÿ8·ÀÂåå1
 J
-java:S1144µ",Remove this unused private "receive" method.(Ä‰¥Ù8¸ÒÃßå1
+java:S1144Â",Remove this unused private "receive" method.(Ä‰¥Ù8²ÀÈäå1
 Q
-java:S1144º".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8¸ÒÃßå1
+java:S1144Ç".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8²ÀÈäå1

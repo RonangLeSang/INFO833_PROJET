@@ -26,10 +26,17 @@ public class ApplicationLayer implements EDProtocol {
 
     //key : nodeID
     //value : nodeIndex
-    private HashMap<Integer, Integer> rightNeighbour;
+    private HashMap<Integer, Integer> rightNeighbour = null;
 
-    private HashMap<Integer, Integer> leftNeighbour;
+    private HashMap<Integer, Integer> leftNeighbour = null;
 
+    public HashMap<Integer, Integer> getRightNeighbour() {
+        return rightNeighbour;
+    }
+
+    public HashMap<Integer, Integer> getLeftNeighbour() {
+        return leftNeighbour;
+    }
 
     public ApplicationLayer(String prefix) {
         this.prefix = prefix;
@@ -37,6 +44,10 @@ public class ApplicationLayer implements EDProtocol {
         this.transportPid = Configuration.getPid(prefix + ".transport");
         this.mypid = Configuration.getPid(prefix + ".myself");
         this.transport = null;
+    }
+
+    public TransportLayer getTransport() {
+        return transport;
     }
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
@@ -47,18 +58,22 @@ public class ApplicationLayer implements EDProtocol {
     // 2 -> une fois le noeud placé, oon informe les autres noeuds de son arrivé
     public void processEvent( Node node, int pid, Object receivedMessage) {
 
+        printNeighbours();
         String reqIndex = "reqIndex";
         String reqID = "reqID";
         String srcID = "srcID";
         String srcIndex = "srcIndex";
 
         HashMap message = (HashMap)receivedMessage;
-//        System.out.println(message);
+        System.out.println("recu : " + message);
+        System.out.println("message type : " + (int)message.get("type"));
         switch ((int)message.get("type")){
             case 0:
+                System.out.println("case 0");
                 setNeighbours((int)message.get(srcIndex), (int)message.get(reqIndex), (int)message.get(reqID));
                 break;
             case 1:
+                System.out.println("case 1");
                 System.out.println("ça marche ?   " + leftNeighbour.keySet().iterator().next());
                 if (message.get(srcID)==leftNeighbour.keySet().iterator().next()) {
                     setLeftNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
@@ -66,7 +81,8 @@ public class ApplicationLayer implements EDProtocol {
                     setRightNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
                 }
                 break;
-            default:
+            case 2:
+                System.out.println("case 2");
                 if ((int)message.get(srcID) < getNodeId()) {
                     setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                     setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
@@ -75,6 +91,11 @@ public class ApplicationLayer implements EDProtocol {
                     setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 }
                 break;
+            case 3:
+                System.out.println("case 3");
+                setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
+                setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
+                printNeighbours();
         }
     }
 
@@ -89,14 +110,12 @@ public class ApplicationLayer implements EDProtocol {
     public void setRightNeighbourFromInt( int nodeId, int nodeIndex){
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
-        System.out.println("right maj " + newHashMap);
         setRightNeighbour(newHashMap);
     }
 
     public void setLeftNeighbourFromInt( int nodeId, int nodeIndex){
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
-        System.out.println("left maj " + newHashMap);
         setLeftNeighbour(newHashMap);
     }
 
@@ -114,12 +133,10 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     private boolean isDHTBeginning(){
-        System.out.println("first");
         return leftNeighbour.keySet().iterator().next() > nodeId;
     }
 
     private boolean isDHTEnding(){
-        System.out.println("last");
         return rightNeighbour.keySet().iterator().next() < nodeId;
     }
 
@@ -130,19 +147,17 @@ public class ApplicationLayer implements EDProtocol {
         message.put("reqIndex", reqIndex);
         message.put("reqID", reqID);
         Node nodeSrc = Network.get(srcIndex);
-//        message.put("type", 1);
-//        int destIndex = srcIndex;
-//        Node destination = Network.get(destIndex);
 
         // fait
         if (isFirstNode()){ // cas ou on a une seule node
             setRightNeighbourFromInt(reqID, reqIndex);
             setLeftNeighbourFromInt(reqID, reqIndex);
-
+            message.put("type", 3);
+            transport.send(nodeSrc, Network.get(reqIndex), new HashMap<>(message), 0);
 
         } else if (reqID < getNodeId()) { // si on est pas le premier noeud, et que il faut envoyer la requête à gauche
             if (isDHTBeginning()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
-                transport.send(nodeSrc, Network.get(reqIndex), message, 0); // on envoi au noeud souhaitant s'insérer l'ordre de le faire
+                transport.send(nodeSrc, Network.get(reqIndex), new HashMap<>(message), 0); // on envoi au noeud souhaitant s'insérer l'ordre de le faire
             }
             if (reqID > leftNeighbour.keySet().iterator().next()) { // on insert le noeud à gauche
 
@@ -156,8 +171,6 @@ public class ApplicationLayer implements EDProtocol {
             }
         }
         message.put("type", 0);
-//        transport.send(Network.get(srcIndex), destination, message, 0);
-//        System.out.println("id " + getNodeId() + "\n left " + leftNeighbour + "\n right " + rightNeighbour);
     }
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
