@@ -1,4 +1,4 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(»ÝáÉúÿÿÿÿ
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“J$bd4675f2-b79a-4160-abec-adb0f5e3ca42
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(»ÝáÉúÿÿÿÿJ$9673a2ee-34b9-4a85-9b79-73e38d8221cf

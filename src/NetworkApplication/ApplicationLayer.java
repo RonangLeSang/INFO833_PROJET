@@ -32,11 +32,11 @@ public class ApplicationLayer implements EDProtocol {
 
 
     public ApplicationLayer(String prefix) {
-	this.prefix = prefix;
-	//initialisation des identifiants a partir du fichier de configuration
-	this.transportPid = Configuration.getPid(prefix + ".transport");
-	this.mypid = Configuration.getPid(prefix + ".myself");
-	this.transport = null;
+        this.prefix = prefix;
+        //initialisation des identifiants a partir du fichier de configuration
+        this.transportPid = Configuration.getPid(prefix + ".transport");
+        this.mypid = Configuration.getPid(prefix + ".myself");
+        this.transport = null;
     }
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
@@ -65,6 +65,7 @@ public class ApplicationLayer implements EDProtocol {
                 } else {
                     setRightNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
                 }
+                break;
             default:
                 if ((int)message.get(srcID) < getNodeId()) {
                     setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
@@ -157,16 +158,14 @@ public class ApplicationLayer implements EDProtocol {
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)
     public Object clone() {
-
-	ApplicationLayer dolly = new ApplicationLayer(this.prefix);
-
-	return dolly;
+        ApplicationLayer dolly = new ApplicationLayer(this.prefix);
+        return dolly;
     }
 
     //liaison entre un objet de la couche applicative et un 
     //objet de la couche transport situes sur le meme noeud
     public void setTransportLayer(int index) {
-	this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
+        this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
     }
 
     //envoi d'un message (l'envoi se fait via la couche transport)
@@ -176,12 +175,12 @@ public class ApplicationLayer implements EDProtocol {
 
     //affichage a la reception
     private void receive(Object msg) {
-	System.out.println(this + ": Received " + msg);
+        System.out.println(this + ": Received " + msg);
     }
 
     //retourne le noeud courant
     private Node getMyNode() {
-	return Network.get(this.nodeId);
+        return Network.get(this.nodeId);
     }
 
     public int getMypid() {
