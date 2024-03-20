@@ -1,40 +1,39 @@
 
 L
-java:S3740*"/Provide the parametrized type for this generic.(†öã°8¢ß°‘ã1
+java:S37407"/Provide the parametrized type for this generic.(†öã°8µ˜óÚå1
 r
-java:S11929"PDefine a constant instead of duplicating this literal "newConnectionID" 3 times.(Ú«Áşÿÿÿÿ8¤‘¸‘ã1
-k
-java:S1192."IDefine a constant instead of duplicating this literal "reqIndex" 4 times.(•½È—ûÿÿÿÿ8£ß°‘ã1
-h
-java:S11921"FDefine a constant instead of duplicating this literal "srcID" 5 times.(ÓÈ½¡úÿÿÿÿ8£ß°‘ã1
-k
-java:S1192."IDefine a constant instead of duplicating this literal "srcIndex" 4 times.(•½È—ûÿÿÿÿ8£ß°‘ã1
+java:S1192G"PDefine a constant instead of duplicating this literal "newConnectionID" 3 times.(Ú«Áşÿÿÿÿ8·˜óÚå1
 u
-java:S11929"SDefine a constant instead of duplicating this literal "newConnectionIndex" 3 times.(Ú«Áşÿÿÿÿ8¥‘¸‘ã1
-h
-java:S1192."FDefine a constant instead of duplicating this literal "reqID" 4 times.(•½È—ûÿÿÿÿ8Ëÿµ‘ã1
+java:S1192G"SDefine a constant instead of duplicating this literal "newConnectionIndex" 3 times.(Ú«Áşÿÿÿÿ8·˜óÚå1
 ˆ
-java:S1319X"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8¥ß°‘ã1
+java:S1319f"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8¸˜óÚå1
 Œ
-java:S1319\"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8¥ß°‘ã1
+java:S1319j"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8¸˜óÚå1
 €
-java:S1488‰"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8¥ß°‘ã1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¦ß°‘ã1
-L	java:S106+"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8µß°‘ã1
-m	java:S1280"LEnd this switch case with an unconditional break, return or throw statement.(ªëÅŞúÿÿÿÿ8µß°‘ã1
-n
-java:S21751"LA "HashMap<Integer, Integer>" cannot contain a "String" in a "Integer" type.(ÓÈ½¡úÿÿÿÿ8¶ß°‘ã1
-G	java:S106M"+Replace this use of System.out by a logger.(ËüÚ·8ºß°‘ã1
-L	java:S106T"+Replace this use of System.out by a logger.(’ğ¸çúÿÿÿÿ8¼ß°‘ã1
-L	java:S106a"+Replace this use of System.out by a logger.(‡ÃìÙÿÿÿÿÿ8¾ß°‘ã1
-Y	java:S125ƒ"<This block of commented-out lines of code should be removed.(Øœ°¸8Æß°‘ã1
+java:S1488¡"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8¹˜óÚå1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¼˜óÚå1
+m	java:S128="LEnd this switch case with an unconditional break, return or throw statement.(ªëÅŞúÿÿÿÿ8ï˜óÚå1
+]	java:S1258"<This block of commented-out lines of code should be removed.(´İ•şÿÿÿÿ8ï˜óÚå1
+L	java:S106>"+Replace this use of System.out by a logger.(”÷¬âûÿÿÿÿ8ñ˜óÚå1
+G	java:S106["+Replace this use of System.out by a logger.(ËüÚ·8€™óÚå1
+L	java:S106b"+Replace this use of System.out by a logger.(’ğ¸çúÿÿÿÿ8ƒ™óÚå1
+]	java:S125o"<This block of commented-out lines of code should be removed.(ÚÀä±ûÿÿÿÿ8†™óÚå1
+[
+java:S1854”"=Remove this useless assignment to local variable "destIndex".(åŸ–©8‹™óÚå1
+^	java:S125"<This block of commented-out lines of code should be removed.(àÎ’şşÿÿÿÿ8—™óÚå1
+Y	java:S125›"<This block of commented-out lines of code should be removed.(Øœ°¸8Ÿ™óÚå1
 q
-java:S2975‡"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8Çß°‘ã1
+java:S2975Ÿ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8¡™óÚå1
 f
-java:S1182‡"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8Çß°‘ã1
-Y	java:S125•"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8Éß°‘ã1
-H	java:S106›"+Replace this use of System.out by a logger.(şâì8Éß°‘ã1
+java:S1182Ÿ"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8£™óÚå1
+Y	java:S125­"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8§™óÚå1
+H	java:S106³"+Replace this use of System.out by a logger.(şâì8§™óÚå1
+M	java:S106À"+Replace this use of System.out by a logger.(›ôÊøıÿÿÿÿ8ª™óÚå1
+P
+java:S1144s"3Remove this unused private "isDHTBeginning" method.(À¢·¹8¬™óÚå1
+R
+java:S1144w"0Remove this unused private "isDHTEnding" method.(Ûñ‘ıÿÿÿÿ8ÈÿóÚå1
 J
-java:S1144š",Remove this unused private "receive" method.(Ä‰¥Ù8Ëß°‘ã1
+java:S1144²",Remove this unused private "receive" method.(Ä‰¥Ù8¬™óÚå1
 Q
-java:S1144Ÿ".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8Ëß°‘ã1
+java:S1144·".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8¬™óÚå1

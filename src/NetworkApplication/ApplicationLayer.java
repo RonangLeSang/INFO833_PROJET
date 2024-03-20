@@ -24,6 +24,8 @@ public class ApplicationLayer implements EDProtocol {
     //prefixe de la couche (nom de la variable de protocole du fichier de config)
     private String prefix;
 
+    //key : nodeID
+    //value : nodeIndex
     private HashMap<Integer, Integer> rightNeighbour;
 
     private HashMap<Integer, Integer> leftNeighbour;
@@ -38,26 +40,38 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     //methode appelee lorsqu'un message est recu par le protocole ApplicationLayer du noeud
+
+    // type du message :
+    // 0 -> requête pour trouver sa place
+    // 1 -> requête d'insertion de noeuds
+    // 2 -> une fois le noeud placé, oon informe les autres noeuds de son arrivé
     public void processEvent( Node node, int pid, Object receivedMessage) {
+
+        String reqIndex = "reqIndex";
+        String reqID = "reqID";
+        String srcID = "srcID";
+        String srcIndex = "srcIndex";
+
         HashMap message = (HashMap)receivedMessage;
-        System.out.println(message);
+//        System.out.println(message);
         switch ((int)message.get("type")){
             case 0:
-                setNeighbours((int)message.get("srcIndex"), (int)message.get("reqIndex"), (int)message.get("reqID"));
+                setNeighbours((int)message.get(srcIndex), (int)message.get(reqIndex), (int)message.get(reqID));
                 break;
             case 1:
-                if (message.get("srcID")==leftNeighbour.get("srcID")) {
-                    setLeftNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
+                System.out.println("ça marche ?   " + leftNeighbour.keySet().iterator().next());
+                if (message.get(srcID)==leftNeighbour.keySet().iterator().next()) {
+                    setLeftNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
                 } else {
-                    setRightNeighbourFromInt((int)message.get("reqID"), (int)message.get("reqIndex"));
+                    setRightNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
                 }
             default:
-                if ((int)message.get("srcId") < getNodeId()) {
-                    setLeftNeighbourFromInt((int)message.get("srcID"), (int)message.get("srcIndex"));
+                if ((int)message.get(srcID) < getNodeId()) {
+                    setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                     setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
                 } else {
                     setLeftNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
-                    setRightNeighbourFromInt((int)message.get("srcID"), (int)message.get("srcIndex"));
+                    setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 }
                 break;
         }
@@ -94,8 +108,16 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     private boolean isFirstNode(){
-        System.out.println(" | " + leftNeighbour.keySet().iterator().next() + " | " + rightNeighbour.keySet().iterator().next() + " | " + getNodeId());
+//        System.out.println(" | " + leftNeighbour.keySet().iterator().next() + " | " + rightNeighbour.keySet().iterator().next() + " | " + getNodeId());
         return Objects.equals(leftNeighbour.keySet().iterator().next(), rightNeighbour.keySet().iterator().next()) && rightNeighbour.keySet().iterator().next() == getNodeId();
+    }
+
+    private boolean isDHTBeginning(){
+        return leftNeighbour.keySet().iterator().next() > nodeId;
+    }
+
+    private boolean isDHTEnding(){
+        return rightNeighbour.keySet().iterator().next() < nodeId;
     }
 
     public void setNeighbours(int srcIndex, int reqIndex, int reqID) {
@@ -106,28 +128,30 @@ public class ApplicationLayer implements EDProtocol {
         message.put("reqID", reqID);
         message.put("type", 1);
         int destIndex = srcIndex;
+        Node destination = Network.get(destIndex);
 
-        if (isFirstNode()){
+        if (isFirstNode()){ // cas ou on a une seule node
             setRightNeighbourFromInt(reqID, reqIndex);
             setLeftNeighbourFromInt(reqID, reqIndex);
-        } else if (reqID < getNodeId()) {
-                destIndex = leftNeighbour.values().iterator().next();
-                if (reqID > leftNeighbour.keySet().iterator().next()) {
-                    transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
-                    message.put("type", 2);
-                    message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
-                    message.put("newConnectionIndex", destIndex);
-                    transport.send(Network.get(srcIndex), Network.get(reqIndex), message, 0);
-                    setLeftNeighbourFromInt(reqID, reqIndex);
-                }
-            } else {
-                destIndex = rightNeighbour.values().iterator().next();
-                if (reqID < rightNeighbour.keySet().iterator().next()) {
-                    setRightNeighbourFromInt(reqID, reqIndex);
-                }
+        } else if (reqID < getNodeId()) { // si on est pas le premier noeud, et que il faut envoyer la requête à gauche
+            destIndex = leftNeighbour.values().iterator().next();
+            if (reqID > leftNeighbour.keySet().iterator().next()) { // on insert le noeud à gauche
+                transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
+                message.put("type", 2);
+                message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
+                message.put("newConnectionIndex", destIndex);
+//                    transport.send(Network.get(srcIndex), Network.get(reqIndex), message, 0);
+                setLeftNeighbourFromInt(reqID, reqIndex);
+                destination = Network.get(reqIndex);
             }
+        } else { // si on est pas le premier noeud, et que il faut envoyer la requête à droite
+            destIndex = rightNeighbour.values().iterator().next();
+            if (reqID < rightNeighbour.keySet().iterator().next()) { // on insert le noeud à droite
+                setRightNeighbourFromInt(reqID, reqIndex);
+            }
+        }
         message.put("type", 0);
-        transport.send(Network.get(srcIndex), Network.get(destIndex), message, 0);
+        transport.send(Network.get(srcIndex), destination, message, 0);
 //        System.out.println("id " + getNodeId() + "\n left " + leftNeighbour + "\n right " + rightNeighbour);
     }
 
@@ -164,6 +188,9 @@ public class ApplicationLayer implements EDProtocol {
         return mypid;
     }
 
+    public void printNeighbours(){
+        System.out.println("voisin de gauche : " + leftNeighbour + " | node ID : " + nodeId + " | voisin de droite : " + rightNeighbour);
+    }
 
 
 

@@ -65,6 +65,13 @@ public class Initializer implements peersim.core.Control {
 		currentApp.setRightNeighbour(firstNeighbour);
 		currentApp.setLeftNeighbour(firstNeighbour);
 		ApNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
+		for(int nodeIndex2 = 0; nodeIndex2 < nodeNb; nodeIndex2++){
+			System.out.print("index : " + nodeIndex2 + " | ");
+			currentNode = Network.get(nodeIndex2);
+			currentApp = (ApplicationLayer)currentNode.getProtocol(0);
+			currentApp.printNeighbours();
+		}
+		System.out.println("-------------------------");
 	}
 //	TransportLayer tmp = (TransportLayer)Network.get(1).getProtocol(1);
 
