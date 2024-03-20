@@ -11,7 +11,7 @@ public class DisplayDHTTask implements Control {
         return false; // Assuming you don't want this task to be repeatedly executed
     }
 
-    public void displayDHT(){
+    public static void displayDHT(){
         int nodeNb = Network.size();
         ApplicationLayer currentApp;
         Node currentNode;

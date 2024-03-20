@@ -1,19 +1,10 @@
 
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ô²˜ëå1
-V
-java:S1854&":Remove this useless assignment to local variable "random".(¼İÅf8„³˜ëå1
 :
 java:S2119&"Save and re-use this "Random".(¼İÅf8†³˜ëå1
-G
-java:S1481&"+Remove this unused "random" local variable.(¼İÅf8†³˜ëå1
-W	java:S125("<This block of commented-out lines of code should be removed.(–¯år8†³˜ëå1
-X	java:S125+"<This block of commented-out lines of code should be removed.(¤§Åã8†³˜ëå1
-W
-java:S18545":Remove this useless assignment to local variable "nodeNb".(Íî°ı8Øö™ëå1
+]	java:S125,"<This block of commented-out lines of code should be removed.(­œŞèúÿÿÿÿ8°Çñå1
 N
 java:S11721"1Remove this unused method parameter "apNodeInit".(ìÉŒ»8‡³˜ëå1
-H
-java:S14815"+Remove this unused "nodeNb" local variable.(Íî°ı8Ùö™ëå1
 G	java:S106F"+Replace this use of System.out by a logger.(ŞË¹ş8Š³˜ëå1
 L	java:S106U"+Replace this use of System.out by a logger.(ÂÌ “ıÿÿÿÿ8Œ³˜ëå1
 G	java:S106Z"+Replace this use of System.out by a logger.(ğÔ‘¬8Œ³˜ëå1

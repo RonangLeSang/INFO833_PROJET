@@ -94,22 +94,25 @@ public class ApplicationLayer implements EDProtocol {
                 if ((int)message.get(srcID) < getNodeId()) {
                     setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                     setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
-                } else {
+                } else if((int)message.get(srcID) > getNodeId()){
                     setLeftNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
                     setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
+                } else if((int)message.get("newConnectionID") < getNodeId()){
+                    setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
+                } else {
+                    setLeftNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
                 }
                 break;
             case 3:
                 System.out.println("case 3");
                 setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
-                printNeighbours();
+//                printNeighbours();
             default:
                 System.err.println("message type undefined");
         }
         System.out.println(message);
-        DisplayDHTTask displayDHTTask = new DisplayDHTTask();
-        displayDHTTask.execute();
+//        DisplayDHTTask.displayDHT();
 
     }
 
@@ -122,19 +125,19 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     public void setRightNeighbourFromInt( int nodeId, int nodeIndex){
-        System.out.println("right neighbour set");
-        printNeighbours();
+//        printNeighbours();
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
         setRightNeighbour(newHashMap);
+        DisplayDHTTask.displayDHT();
     }
 
     public void setLeftNeighbourFromInt( int nodeId, int nodeIndex){
-        System.out.println("left neighbour set");
-        printNeighbours();
+//        printNeighbours();
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
         setLeftNeighbour(newHashMap);
+        DisplayDHTTask.displayDHT();
     }
 
     public void setRightNeighbour(HashMap<Integer, Integer> rightNeighbour) {
