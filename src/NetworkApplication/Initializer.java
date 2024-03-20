@@ -63,6 +63,7 @@ public class Initializer implements peersim.core.Control {
 			msg.put("srcID", currentApp.getNodeId());
 			msg.put("reqIndex", nodeIndex);
 			msg.put("reqID", currentApp.getNodeId());
+			System.out.println("base msg : " + msg);
 
 //			apNodeInit.setNeighbours(0, nodeIndex, currentApp.getNodeId());
 			apNodeInit.getTransport().send(currentNode, Network.get(0), new HashMap<>(msg), 0);

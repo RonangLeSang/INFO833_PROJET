@@ -1,9 +1,10 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8™«ƒåå1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8Ý˜Üæå1
 :
-java:S2119&"Save and re-use this "Random".(¼ÝÅf8µ«ƒåå1
-]	java:S125C"<This block of commented-out lines of code should be removed.(å¶Æäüÿÿÿÿ8øß‡åå1
-L	java:S106O"+Replace this use of System.out by a logger.(ÂÌ “ýÿÿÿÿ8½«ƒåå1
-G	java:S106T"+Replace this use of System.out by a logger.(ðÔ‘¬8¾«ƒåå1
-G	java:S106]"+Replace this use of System.err by a logger.(­ðˆ8¿«ƒåå1
-L	java:S106i"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8À«ƒåå1
+java:S2119&"Save and re-use this "Random".(¼ÝÅf8÷˜Üæå1
+G	java:S106B"+Replace this use of System.out by a logger.(ÞË¹þ8Ä§ëæå1
+]	java:S125D"<This block of commented-out lines of code should be removed.(å¶Æäüÿÿÿÿ8Å§ëæå1
+L	java:S106P"+Replace this use of System.out by a logger.(ÂÌ “ýÿÿÿÿ8Æ§ëæå1
+G	java:S106U"+Replace this use of System.out by a logger.(ðÔ‘¬8Ç§ëæå1
+G	java:S106^"+Replace this use of System.err by a logger.(­ðˆ8È§ëæå1
+L	java:S106j"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8É§ëæå1

@@ -8,7 +8,6 @@ public class Message {
     private int reqID;
     private int type;
     private int newConnectionId;
-
     private int newConnectionIndex;
     Message(int scrIndex, int srcID, int reqIndex, int reqID, int type) {
 	this.scrIndex = scrIndex;

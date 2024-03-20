@@ -58,7 +58,6 @@ public class ApplicationLayer implements EDProtocol {
     // 2 -> une fois le noeud placé, oon informe les autres noeuds de son arrivé
     public void processEvent( Node node, int pid, Object receivedMessage) {
 
-        printNeighbours();
         String reqIndex = "reqIndex";
         String reqID = "reqID";
         String srcID = "srcID";
@@ -74,7 +73,6 @@ public class ApplicationLayer implements EDProtocol {
                 break;
             case 1:
                 System.out.println("case 1");
-                System.out.println("ça marche ?   " + leftNeighbour.keySet().iterator().next());
                 if (message.get(srcID)==leftNeighbour.keySet().iterator().next()) {
                     setLeftNeighbourFromInt((int)message.get(reqID), (int)message.get(reqIndex));
                 } else {
@@ -96,7 +94,13 @@ public class ApplicationLayer implements EDProtocol {
                 setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 printNeighbours();
+            default:
+                System.err.println("message type undefined");
         }
+
+        DisplayDHTTask displayDHTTask = new DisplayDHTTask();
+        displayDHTTask.execute();
+
     }
 
     public int getNodeId() {
@@ -108,12 +112,16 @@ public class ApplicationLayer implements EDProtocol {
     }
 
     public void setRightNeighbourFromInt( int nodeId, int nodeIndex){
+        System.out.println("right neighbour set");
+        printNeighbours();
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
         setRightNeighbour(newHashMap);
     }
 
     public void setLeftNeighbourFromInt( int nodeId, int nodeIndex){
+        System.out.println("left neighbour set");
+        printNeighbours();
         HashMap<Integer, Integer> newHashMap = new HashMap<>();
         newHashMap.put(nodeId, nodeIndex);
         setLeftNeighbour(newHashMap);
@@ -156,18 +164,36 @@ public class ApplicationLayer implements EDProtocol {
             transport.send(nodeSrc, Network.get(reqIndex), new HashMap<>(message), 0);
 
         } else if (reqID < getNodeId()) { // si on est pas le premier noeud, et que il faut envoyer la requête à gauche
-            if (isDHTBeginning()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
+            if (isDHTBeginning() || reqID > leftNeighbour.keySet().iterator().next()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
+                System.out.println();
+
+                message.put("type", 1);
+                transport.send(nodeSrc, Network.get(leftNeighbour.values().iterator().next()), new HashMap<>(message), 0);
+
+                message.put("type", 2);
+                message.put("newConnectionIndex", leftNeighbour.values().iterator().next());
+                message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
                 transport.send(nodeSrc, Network.get(reqIndex), new HashMap<>(message), 0); // on envoi au noeud souhaitant s'insérer l'ordre de le faire
+                setLeftNeighbourFromInt(reqID, reqIndex);
+            } else {
+                message.put("type", 0);
+                transport.send(nodeSrc, Network.get(leftNeighbour.values().iterator().next()), new HashMap<>(message), 0);
             }
-            if (reqID > leftNeighbour.keySet().iterator().next()) { // on insert le noeud à gauche
-
-            }
-
         } else { // si on est pas le premier noeud, et que il faut envoyer la requête à droite
-            if (isDHTEnding()) { // cas ou on est à la fin de la DHT -> on insère le noeud directement à droite
-                ;
-            }
-            if (reqID < rightNeighbour.keySet().iterator().next()) { // on insert le noeud à droite
+            System.out.println("droite");
+            if (isDHTEnding() || reqID < rightNeighbour.keySet().iterator().next()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
+
+                message.put("type", 1);
+                transport.send(nodeSrc, Network.get(rightNeighbour.values().iterator().next()), new HashMap<>(message), 0);
+
+                message.put("type", 2);
+                message.put("newConnectionIndex", rightNeighbour.values().iterator().next());
+                message.put("newConnectionID", rightNeighbour.keySet().iterator().next());
+                transport.send(nodeSrc, Network.get(reqIndex), new HashMap<>(message), 0); // on envoi au noeud souhaitant s'insérer l'ordre de le faire
+                setRightNeighbourFromInt(reqID, reqIndex);
+            } else {
+                message.put("type", 0);
+                transport.send(nodeSrc, Network.get(rightNeighbour.values().iterator().next()), new HashMap<>(message), 0);
             }
         }
         message.put("type", 0);
