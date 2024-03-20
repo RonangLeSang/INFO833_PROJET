@@ -107,7 +107,7 @@ public class ApplicationLayer implements EDProtocol {
             default:
                 System.err.println("message type undefined");
         }
-
+        System.out.println(message);
         DisplayDHTTask displayDHTTask = new DisplayDHTTask();
         displayDHTTask.execute();
 
@@ -189,7 +189,6 @@ public class ApplicationLayer implements EDProtocol {
                 transport.send(nodeSrc, Network.get(leftNeighbour.values().iterator().next()), new HashMap<>(message), 0);
             }
         } else { // si on est pas le premier noeud, et que il faut envoyer la requête à droite
-            System.out.println("droite");
             if (isDHTEnding() || reqID < rightNeighbour.keySet().iterator().next()) { // cas ou on est au début de la DHT -> on insère le noeud directement à gauche
 
                 message.put("type", 1);
@@ -219,11 +218,6 @@ public class ApplicationLayer implements EDProtocol {
     public void setTransportLayer(int index) {
         this.transport = (TransportLayer) Network.get(index).getProtocol(this.transportPid);
     }
-
-    //envoi d'un message (l'envoi se fait via la couche transport)
-//    public void send(Message msg, Node dest) {
-//	this.transport.send(getMyNode(), dest, msg, this.mypid);
-//    }
 
     //affichage a la reception
     private void receive(Object msg) {

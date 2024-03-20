@@ -14,7 +14,7 @@ java:S1319Œ"kThe type of "rightNeighbour" should be an interface such as "Map"
 
 java:S1319"jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8‡Ç¥èå1
 €
-java:S1488Õ"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8ˆÇ¥èå1
+java:S1488Ô"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8ˆÇ¥èå1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ŠÇ¥èå1
 m	java:S128f"LEnd this switch case with an unconditional break, return or throw statement.(‰ÆÄÎşÿÿÿÿ8»Ç¥èå1
 ]	java:S125M"<This block of commented-out lines of code should be removed.(€áØƒûÿÿÿÿ8»Ç¥èå1
@@ -23,18 +23,17 @@ G	java:S106U"+Replace this use of System.out by a logger.(Ë‹½»8¾Ç¥èå1
 L	java:S106]"+Replace this use of System.out by a logger.(¾ÍêÇşÿÿÿÿ8ÁÇ¥èå1
 G	java:S106g"+Replace this use of System.out by a logger.(õÙ°ñ8ÃÇ¥èå1
 L	java:S106l"+Replace this use of System.err by a logger.(Ó®îöüÿÿÿÿ8ÄÇ¥èå1
-G	java:S106}"+Replace this use of System.out by a logger.(”ˆí8ÇÇ¥èå1
-H	java:S106…"+Replace this use of System.out by a logger.(äãˆ‘8ÊÇ¥èå1
+L	java:S106n"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8ÇÇ¥èå1
+G	java:S106}"+Replace this use of System.out by a logger.(”ˆí8ÊÇ¥èå1
+H	java:S106…"+Replace this use of System.out by a logger.(äãˆ‘8ŞÇ¥èå1
 ^	java:S125•"<This block of commented-out lines of code should be removed.(ÚÀä±ûÿÿÿÿ8ÍÇ¥èå1
-M	java:S106À"+Replace this use of System.out by a logger.(¿£’şúÿÿÿÿ8ŞÇ¥èå1
 q
-java:S2975Ô"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8åÇ¥èå1
+java:S2975Ó"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8åÇ¥èå1
 f
-java:S1182Ô"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8æÇ¥èå1
-Y	java:S125à"<This block of commented-out lines of code should be removed.(ÿÂ„Ò8éÇ¥èå1
-H	java:S106æ"+Replace this use of System.out by a logger.(şâì8éÇ¥èå1
-M	java:S106ó"+Replace this use of System.out by a logger.(›ôÊøıÿÿÿÿ8ìÇ¥èå1
+java:S1182Ó"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8æÇ¥èå1
+H	java:S106à"+Replace this use of System.out by a logger.(şâì8ìÇ¥èå1
+M	java:S106í"+Replace this use of System.out by a logger.(›ôÊøıÿÿÿÿ8®—êå1
 J
-java:S1144å",Remove this unused private "receive" method.(Ä‰¥Ù8íÇ¥èå1
+java:S1144ß",Remove this unused private "receive" method.(Ä‰¥Ù8íÇ¥èå1
 Q
-java:S1144ê".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8íÇ¥èå1
+java:S1144ä".Remove this unused private "getMyNode" method.(–ğùÿÿÿÿ8íÇ¥èå1

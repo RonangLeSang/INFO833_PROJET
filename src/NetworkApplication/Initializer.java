@@ -56,7 +56,7 @@ public class Initializer implements peersim.core.Control {
 
 		int delay = 500; // Set the initial delay
 
-		for (int nodeIndex = 1; nodeIndex < nodeNb; nodeIndex++) {
+		for (int nodeIndex = 1; nodeIndex < 6; nodeIndex++) {
 			currentNode = Network.get(nodeIndex);
 			currentApp = (ApplicationLayer)currentNode.getProtocol(0);
 			currentApp.setTransportLayer(nodeIndex);
@@ -91,26 +91,26 @@ public class Initializer implements peersim.core.Control {
 	}
 
     public boolean execute() {
-	int nodeNb;
-	ApplicationLayer apNodeInit;
+		int nodeNb;
+		ApplicationLayer apNodeInit;
 
-	nodeNb = Network.size();
-	if (nodeNb < 1) {
-	    System.err.println("Network size is not positive");
-	    System.exit(1);
-	}
+		nodeNb = Network.size();
+		if (nodeNb < 1) {
+			System.err.println("Network size is not positive");
+			System.exit(1);
+		}
 
-	//recuperation de la couche applicative de l'emetteur (le noeud 0)
-	apNodeInit = (ApplicationLayer)Network.get(0).getProtocol(this.helloWorldPid);
-	apNodeInit.setTransportLayer(0);
+		//recuperation de la couche applicative de l'emetteur (le noeud 0)
+		apNodeInit = (ApplicationLayer)Network.get(0).getProtocol(this.helloWorldPid);
+		apNodeInit.setTransportLayer(0);
 
-	setNodeID();
-	initFirstNeighbours(apNodeInit);
+		setNodeID();
+		initFirstNeighbours(apNodeInit);
 
-	setTransportAndNeighbours(apNodeInit);
-	System.out.println("Initialization completed");
-	displayDHT();
-	return false;
-    }
+		setTransportAndNeighbours(apNodeInit);
+		System.out.println("Initialization completed");
+		displayDHT();
+		return false;
+		}
 }
 
