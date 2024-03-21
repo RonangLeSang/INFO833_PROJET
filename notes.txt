@@ -4,6 +4,9 @@ type du message :
 1 -> requête d'insertion de noeuds
 2 -> une fois le noeud placé, on informe les autres noeuds de son arrivé
 3 -> setBothNeighbours
+4 -> set right neighbour
+5 -> set left neighbour
+6 -> leave
 
 send(Node src, Node dest, Object msg, int pid)
 

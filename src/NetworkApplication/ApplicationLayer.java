@@ -66,6 +66,9 @@ public class ApplicationLayer implements EDProtocol {
     // 1 -> requête d'insertion de noeuds
     // 2 -> une fois le noeud placé, oon informe les autres noeuds de son arrivé
     // 3 -> setBothNeighbours
+    // 4 -> set right neighbour
+    // 5 -> set left neighbour
+    // 6 -> leave
     public void processEvent( Node node, int pid, Object receivedMessage) {
 
         String reqIndex = "reqIndex";
@@ -73,9 +76,8 @@ public class ApplicationLayer implements EDProtocol {
         String srcID = "srcID";
         String srcIndex = "srcIndex";
 
-        HashMap message = (HashMap)receivedMessage;
+        HashMap message = (HashMap<String, Integer>)receivedMessage;
 //        System.out.println("recu : " + message);
-//        System.out.println("message type : " + (int)message.get("type"));
         switch ((int)message.get("type")){
             case 0:
                 System.out.println("case 0");
@@ -107,7 +109,20 @@ public class ApplicationLayer implements EDProtocol {
                 System.out.println("case 3");
                 setRightNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
                 setLeftNeighbourFromInt((int)message.get(srcID), (int)message.get(srcIndex));
-//                printNeighbours();
+                break;
+            case 4:
+                System.out.println("case 4");
+                setRightNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
+                break;
+            case 5:
+                System.out.println("case 5");
+                setLeftNeighbourFromInt((int)message.get("newConnectionID"), (int)message.get("newConnectionIndex"));
+                break;
+            case 6:
+                System.out.println("case 6");
+                System.out.println("index : " + index + " LEAVING" + nodeId);
+                leave();
+                break;
             default:
                 System.err.println("message type undefined");
         }
@@ -208,6 +223,28 @@ public class ApplicationLayer implements EDProtocol {
             }
         }
         message.put("type", 0);
+    }
+
+    public void leave(){
+        if((rightNeighbour != null && leftNeighbour != null) && !isFirstNode()){
+            Node nodeSrc = Network.get(index);
+            HashMap<String, Integer> message = new HashMap<>();
+            message.put("srcIndex", index);
+            message.put("srcID", getNodeId());
+
+            message.put("newConnectionIndex", rightNeighbour.values().iterator().next());
+            message.put("newConnectionID", rightNeighbour.keySet().iterator().next());
+            message.put("type", 4);
+            transport.send(nodeSrc, Network.get(leftNeighbour.values().iterator().next()), new HashMap<>(message), 0); // on set le voisin droit de notre voisin gauche
+
+            message.put("newConnectionIndex", leftNeighbour.values().iterator().next());
+            message.put("newConnectionID", leftNeighbour.keySet().iterator().next());
+            message.put("type", 5);
+            transport.send(nodeSrc, Network.get(rightNeighbour.values().iterator().next()), new HashMap<>(message), 0); // on set le voisin gauche de notre voisin droit
+
+            setLeftNeighbourFromInt(nodeId, index);
+            setRightNeighbourFromInt(nodeId, index);
+        }
     }
 
     //methode necessaire pour la creation du reseau (qui se fait par clonage d'un prototype)

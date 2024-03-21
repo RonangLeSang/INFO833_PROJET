@@ -1,12 +1,13 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8ô²˜ëå1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¶Á‡Œæ1
 :
-java:S2119&"Save and re-use this "Random".(¼ÝÅf8†³˜ëå1
-]	java:S125,"<This block of commented-out lines of code should be removed.(­œÞèúÿÿÿÿ8°Çñå1
+java:S2119&"Save and re-use this "Random".(¼ÝÅf8æÁ‡Œæ1
+]	java:S125,"<This block of commented-out lines of code should be removed.(­œÞèúÿÿÿÿ8èÁ‡Œæ1
 N
-java:S11721"1Remove this unused method parameter "apNodeInit".(ìÉŒ»8‡³˜ëå1
-G	java:S106F"+Replace this use of System.out by a logger.(ÞË¹þ8Š³˜ëå1
-L	java:S106U"+Replace this use of System.out by a logger.(ÂÌ “ýÿÿÿÿ8Œ³˜ëå1
-G	java:S106Z"+Replace this use of System.out by a logger.(ðÔ‘¬8Œ³˜ëå1
-G	java:S106c"+Replace this use of System.err by a logger.(­ðˆ8³˜ëå1
-L	java:S106o"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8³˜ëå1
+java:S11721"1Remove this unused method parameter "apNodeInit".(ìÉŒ»8êÁ‡Œæ1
+G	java:S106F"+Replace this use of System.out by a logger.(ÞË¹þ8ïÁ‡Œæ1
+]	java:S125O"<This block of commented-out lines of code should be removed.(¹¤ˆÀþÿÿÿÿ8ãŽ¾Œæ1
+L	java:S106X"+Replace this use of System.out by a logger.(ÂÌ “ýÿÿÿÿ8ôÁ‡Œæ1
+G	java:S106]"+Replace this use of System.out by a logger.(ðÔ‘¬8øÁ‡Œæ1
+G	java:S106f"+Replace this use of System.err by a logger.(­ðˆ8õÁ‡Œæ1
+L	java:S106r"+Replace this use of System.out by a logger.(þà‰ªøÿÿÿÿ8¶†¥Œæ1

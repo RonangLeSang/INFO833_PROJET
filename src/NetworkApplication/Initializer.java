@@ -75,6 +75,9 @@ public class Initializer implements peersim.core.Control {
 			// Increment the delay for the next message
 			delay += 600;
 			}
+
+//		msg.put("type", 6);
+//		EDSimulator.add(10000, new HashMap<>(msg), Network.get(4), 0);
 	}
 
 	public void displayDHT(){
