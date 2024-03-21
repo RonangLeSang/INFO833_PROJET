@@ -112,7 +112,6 @@ public class Initializer implements peersim.core.Control {
 
 		setTransportAndNeighbours(apNodeInit);
 		System.out.println("Initialization completed");
-		displayDHT();
 		return false;
 		}
 }
