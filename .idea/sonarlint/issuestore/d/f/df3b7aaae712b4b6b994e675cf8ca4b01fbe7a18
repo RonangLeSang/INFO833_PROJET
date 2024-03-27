@@ -1,35 +1,35 @@
 
-w
-java:S3740K"/Provide the parametrized type for this generic.(¥‡Ë¢úÿÿÿÿ8Æ²’æ1J$4507df37-6917-4722-99a9-a2afe158ce4a
-™
-java:S1192]"QDefine a constant instead of duplicating this literal "newConnectionID" 11 times.(Ú«Áşÿÿÿÿ8É²’æ1J$6de01f57-7a72-4870-84f8-a178eaf5eb36
-œ
-java:S1192]"TDefine a constant instead of duplicating this literal "newConnectionIndex" 10 times.(Ú«Áşÿÿÿÿ8É²’æ1J$38e05d84-a76f-4aa7-a60a-633644c5d40a
-‰
-java:S1192H"FDefine a constant instead of duplicating this literal "srcID" 3 times.(Î«Ï¹8É²’æ1J$df752845-4294-4902-95c2-4092137c4b8f
+Q
+java:S3740K"/Provide the parametrized type for this generic.(¥‡Ë¢úÿÿÿÿ8‰ç¶«æ1
+s
+java:S1192]"QDefine a constant instead of duplicating this literal "newConnectionID" 11 times.(Ú«Áşÿÿÿÿ8œç¶«æ1
+v
+java:S1192]"TDefine a constant instead of duplicating this literal "newConnectionIndex" 10 times.(Ú«Áşÿÿÿÿ8«ç¶«æ1
+c
+java:S1192H"FDefine a constant instead of duplicating this literal "srcID" 3 times.(Î«Ï¹8°ç¶«æ1
+f
+java:S1192I"IDefine a constant instead of duplicating this literal "srcIndex" 3 times.(´Ã×ä8´ç¶«æ1
+ˆ
+java:S1319"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8µç¶«æ1
 Œ
-java:S1192I"IDefine a constant instead of duplicating this literal "srcIndex" 3 times.(´Ã×ä8É²’æ1J$0e3f2220-8525-47ff-8e63-c51cd563da97
-®
-java:S1319"kThe type of "rightNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(Œ½·Í8Ê²’æ1J$dc36d6cf-6ae2-4e8c-9fcc-131f0695c725
-²
-java:S1319 "jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8Ê²’æ1J$5530f39a-78a4-4680-a8ff-c0b5f4ed1738
-¦
-java:S1488ã"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8Ì²’æ1J$0e84c64f-6deb-424b-822f-32a7e87e7386
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8Î²’æ1J$9c323db0-dce4-4055-84f7-003f4434b46b
-r	java:S106N"+Replace this use of System.out by a logger.(»ş¹ûûÿÿÿÿ8ó²’æ1J$fe57b20c-c7b5-40b8-993a-8f8126425ff7
-m	java:S106R"+Replace this use of System.out by a logger.(Ë‹½»8ô²’æ1J$96c353ee-890b-40ad-9aa1-29a947e2039c
-r	java:S106Z"+Replace this use of System.out by a logger.(¾ÍêÇşÿÿÿÿ8õ²’æ1J$a277a587-2a96-4f43-b47f-85280aa14fa2
-m	java:S106h"+Replace this use of System.out by a logger.(õÙ°ñ8ø²’æ1J$ead45b90-61da-42e1-9748-5d25e8d3e51b
-r	java:S106m"+Replace this use of System.out by a logger.(İ’¢ÿşÿÿÿÿ8ø²’æ1J$3883c779-387d-4357-a89e-cb1e1d15fba0
-m	java:S106q"+Replace this use of System.out by a logger.(ÙÂŒì8ù²’æ1J$b9156971-e4f8-429d-8afd-05aa33dd3060
-m	java:S106u"+Replace this use of System.out by a logger.(ôıˆ­8ù²’æ1J$f035d45f-e40a-47ea-9a15-caf1b9a51f43
-r	java:S106v"+Replace this use of System.out by a logger.(…ü‰ãúÿÿÿÿ8ù²’æ1J$3a04b431-de40-4504-ab32-c2b081ec97e7
-r	java:S106z"+Replace this use of System.err by a logger.(Ó®îöüÿÿÿÿ8ú²’æ1J$0aaf38fb-f327-4038-8caf-8149053ef028
-r	java:S106|"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8ú²’æ1J$4215c963-fdec-4247-842b-537ce21e220a
-—
-java:S2975â"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8•‘²’æ1J$66dfd253-09d4-4b5b-a78e-aa7941d12332
-Œ
-java:S1182â"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8•‘²’æ1J$0aabb32a-c8df-42c9-94ce-84d0125b94cc
-m	java:S106é"+Replace this use of System.out by a logger.(–ğéE8–‘²’æ1J$301ef4da-4a1a-45c1-980c-185cea8a9beb
-l
-java:S1068")Remove this unused "mypid" private field.(‡ÉÅ 8˜‘²’æ1J$5d367c03-2d73-493c-90aa-fcfd9555b344
+java:S1319 "jThe type of "leftNeighbour" should be an interface such as "Map" rather than the implementation "HashMap".(â¬Üîùÿÿÿÿ8¶ç¶«æ1
+€
+java:S1488ã"]Immediately return this expression instead of assigning it to the temporary variable "dolly".(ˆ‡øÙşÿÿÿÿ8¸ç¶«æ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Â€™“8¾ç¶«æ1
+L	java:S106N"+Replace this use of System.out by a logger.(»ş¹ûûÿÿÿÿ8»è¶«æ1
+G	java:S106R"+Replace this use of System.out by a logger.(Ë‹½»8¾è¶«æ1
+L	java:S106Z"+Replace this use of System.out by a logger.(¾ÍêÇşÿÿÿÿ8Âè¶«æ1
+G	java:S106h"+Replace this use of System.out by a logger.(õÙ°ñ8Ìè¶«æ1
+L	java:S106m"+Replace this use of System.out by a logger.(İ’¢ÿşÿÿÿÿ8Îè¶«æ1
+G	java:S106q"+Replace this use of System.out by a logger.(ÙÂŒì8Ğè¶«æ1
+G	java:S106u"+Replace this use of System.out by a logger.(ôıˆ­8Òè¶«æ1
+L	java:S106v"+Replace this use of System.out by a logger.(…ü‰ãúÿÿÿÿ8Óè¶«æ1
+L	java:S106z"+Replace this use of System.err by a logger.(Ó®îöüÿÿÿÿ8åôí«æ1
+L	java:S106|"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8Õè¶«æ1
+q
+java:S2975â"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(²ÈŞ8Œé¶«æ1
+f
+java:S1182â"HUse super.clone() to create and seed the cloned instance to be returned.(²ÈŞ8é¶«æ1
+G	java:S106é"+Replace this use of System.out by a logger.(–ğéE8é¶«æ1
+F
+java:S1068")Remove this unused "mypid" private field.(‡ÉÅ 8’é¶«æ1
